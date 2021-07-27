@@ -27,23 +27,24 @@ const Navigation = () => {
     return (
         <>
         <nav className="navbar">
-            <div className="navbar-container">
-                <a href="/" className="navbar-logo" onClick={closeMobileMenu}>
-                    GIFERMO II
+        <h1 href="/" className="navbar-logo" onClick={closeMobileMenu}>
+                    <b>Trust Motores</b>
                     <i class='fas fa-tree'/>
-                </a>
+                </h1>
                 <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+            <div className="navbar-container">
+              
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             
             <li className='nav-item'>
               <a
-                href='#services'
+                href='#campanha'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                {jsonData.Navigation.about}
+                {jsonData.Navigation.campaign}
               </a>
             </li>
             <li className='nav-item'>
@@ -54,14 +55,7 @@ const Navigation = () => {
                 {jsonData.Navigation.services}
               </a>
             </li>
-            <li className='nav-item'>
-              <a
-                href='#portfolio'
-                className='nav-links'
-                onClick={closeMobileMenu}>
-                {jsonData.Navigation.portfolio}
-              </a>
-            </li>
+            
             <li className='nav-item'>
               <a
                 href='#contact'
@@ -80,12 +74,13 @@ const Navigation = () => {
             </li>
 
           </ul>
+          
+          </div>
           <button href="#modal"
               className="qbtn"
               onClick={closeMobileMenu}>
                 {jsonData.Navigation.getquote}
               </button>
-          </div>
       </nav>
         </>
     )

@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+
+@font-face {
+	font-family: 'Edge Of Madness';
+	src: url('/src/fonts/EdgeOfMadness.ttf');
+}
+@font-face {
+	font-family: 'Mellinda Lopez';
+	src: url('/src/fonts/MellindaLopez.ttf');
+}
+@font-face {
+	font-family: 'University';
+	src: url('/src/fonts/University.otf');
+}
 :root {
-    --main-color: #252525;
-    --secundary-color: #D42424;
+    --main-color: #303956;
+    --secondary-color: #c30000;
 }
 
 body, html {
@@ -29,19 +43,20 @@ li {
 
 /* Navigation */
 .navbar {
-	background: #FFFFFF;
+	background: transparent;
 	font-family: 'Manrope', sans-serif;
 	height: 80px;
+	width: 100%;
 	display: flex;
 	font-weight: 700;
 	text-transform: uppercase;
 	justify-content: center;
 	align-items: center;
 	font-size: 1rem;
-	position: sticky;
+	position:fixed;
 	top: 0;
+	margin: 0;
 	z-index: 999;
-	box-shadow: 0 2px 2px 0.5px rgba(0,0,0,.1);
   }
   
   .navbar-container {
@@ -49,20 +64,22 @@ li {
 	justify-content: center;
 	align-items: center;
 	height: 80px;
-	max-width: 1500px;
+	max-width: 1800px;
   }
   
   .navbar-logo {
-    font-family: "Fredoka One";
-	color: var(--secundary-color);
-	letter-spacing: 2px;
-	justify-self: center;
+    font-family: "Edge Of Madness";
+	color: #D52228;
+	letter-spacing: 3px;
 	cursor: default;
-	font-weight: 700;
+	font-weight: 900;
+	margin-left: 0;
 	text-decoration: none;
-	font-size: 2rem;
+	text-transform: uppercase;
+	font-size: 1.8em;
 	display: flex;
-	align-items: center;
+	margin-right: auto;
+	margin-left: 4rem;
   }
   
   .fa-tree {
@@ -76,9 +93,8 @@ li {
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
-	width: 35vw;
-	justify-content: end;
-	margin-right: 2rem;
+	width: 30vw;
+	justify-content: center;
   }
   
   .nav-item {
@@ -87,7 +103,7 @@ li {
   
   .nav-links {
 	font-family: "Barlow";
-	color: #35383C;
+	color: #fff;
 	display: flex;
 	align-items: center;
 	text-decoration: none;
@@ -96,28 +112,35 @@ li {
   }
 
   .qbtn {
-	  font-family: "Barlow";
-	  color: #fff;
-	  background-color: var(--secundary-color);
-	  border:none;
-	  font-size: 17px;
-	  display: flex;
-	  align-items: center;
-	  text-decoration: none;
-	  height: 100%;
-	  padding: 0rem 1rem;
-  }
+	display: inline-block;
+	font:normal normal 300 1.1em 'Barlow';
+	font-weight: 700;
+	text-decoration:none;	
+	color:#fff;
+	background-color: var(--secondary-color);
+	border: 1.5px solid #fff;
+	border-radius: 80px;
+	padding: .6rem 1rem;
+	margin-right: 10%;
+	background-size: 200% 100%;	
+	background-image: linear-gradient(to right, transparent 50%, var(--main-color) 50%);
+	transition: background-position 1.5s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color 2s ease;
+}
+
 
   .qbtn:hover {
-	  color: #fff;
-	  background-color: #c30000;
-	  
+	color:rgba(255, 255, 255, 1);
+	background-color:var(--main-color);
+	background-position: -100% 100%;
+	border: 2px solid #fff;
+	cursor: pointer;
   }
   
   .nav-links:hover {
-      color: var(--secundary-color);
-	border-bottom: 2px solid var(--secundary-color);
-	transition: all 0.1s ease-in;
+     color: var(--secondary-color);
+	border-bottom: 2px solid var(--secondary-color);
+	transition: all 1s ease-out;
+	cursor: pointer;
   }
   
  
@@ -220,103 +243,59 @@ li {
   /* Home */
 
   .home {
-	  top: 0;
-	  position: relative;
-	  height: 100%;
-	  max-width: 100%;
 	  display: flex;
-	  justify-content: center;
+	  justify-content: flex-start;
 	  align-items: center;
-	  background-color: var(--main-color);
-  }
-
-
-  .some-page-wrapper {
-	margin: 15px;
-	height: 100%;
-	
-  }
-  
-  .home-row {
-	display: flex;
-	flex-direction: row;
-	align-self: center;
-	align-content: center;
-  }
-  
-  .home-column {
-	width: 50%;
-	height: 100%;
-  }
-  
-  .home-column-right {
-	background-color: green;
-	width: 50%;
-  }
-
-
-
-  h1{
-	  color: #fff;
-  }
-
-  .image {
-	  width: 100vh;
-	  height: 100%;
-	  z-index: -1;
 	  background-size: cover !important;
+	  background: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1627402804/Untitled-1_lq7oym.jpg");
   }
 
-.right-arrow {
-	position: absolute;
-	top: 50%;
-	right: 32px;
-	font-size: 3rem;
-	color: antiquewhite;
-	z-index: 10;
-	cursor: pointer;
-	user-select: none;
-}
 
-.left-arrow {
-	position: absolute;
-	top: 50%;
-	left: 32px;
-	font-size: 3rem;
-	color: antiquewhite;
-	z-index: 10;
-	cursor: pointer;
-	user-select: none;
-}
-
-.slide {
-	opacity: 0;
-	transition-duration: 1s ease;
-}
-
-.slide.active {
-	opacity: 1;
-	transition-duration: 1s;
-	transform: scale(1.08);
-}
-
-
-
-
-/* Home 2 */
-
-.row {
-	display: flex;
-	flex-direction: row;
-	align-self: center;
-	align-content: center;
-}
-
-.column-left {
-	width: 50%;
+.home-row {
 	height: 100vh;
-}
+	display: flex;
+	flex-direction: column;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .home.home-column {
+	max-width: 100%;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+  }
 
-.column-right {
-	width: 50%;
-}
+  .home.home-text{
+	max-width: 100%;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .home-text h1 {
+	  font-family: 900 "Rubik", sans-serif;
+	  font-weight: 900;
+	  font-size: 2rem;
+	  position: absolute;
+	  max-width: 100%;
+	  margin-right: 0;
+	  margin-left: 4%;
+	  margin-top: -5%;
+  }
+  .home-text ul {
+	text-decoration: none;
+	align-self: flex-end;
+	justify-content: center;
+	align-self: center;
+  }
+  .home-text ul li {
+	list-style-type: none;
+	font-family: "Mellinda Lopez";
+	max-width: 100%;
+	font-size: 2rem;
+	font-weight: 600;
+	margin-left: 15%;
+  }
+  
+ 

@@ -4,7 +4,7 @@ import JSONData from './data/data.json';
 import './css/style.css';
 import Nav from './components/navigation';
 import Home from './components/home'
-import Home2 from './components/home2'
+import CountDown from './components/countdown';
 import { SliderData } from './components/SliderData';
 
 export class App extends Component {
@@ -24,6 +24,8 @@ export class App extends Component {
       <>
       <Nav/>
       <Home slides={SliderData}/>
+      <CountDown/>
+      <Home/>
       </>
     )
   }

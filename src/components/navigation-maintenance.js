@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import jsonData from '../data/data.json'
+import '../css/navigationmaintenance.css'
 
-const Navigation = () => {
+const NavigationMaintenance = () => {
 
     const [click, setClick] = useState(false);
     const[button, setButton] = useState(true);
@@ -30,28 +31,13 @@ const Navigation = () => {
         <h1 href="/" className="navbar-logo" onClick={closeMobileMenu}>
                     <b>Trust Motores</b>
                 </h1>
-                
+                <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </div>
             <div className="navbar-container">
               
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             
-            <li className='nav-item'>
-              <a
-                href='#campanha'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                {jsonData.Navigation.campaign}
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a
-                href='#products'
-                className='nav-links'
-                onClick={closeMobileMenu}>
-                {jsonData.Navigation.services}
-              </a>
-            </li>
             
             <li className='nav-item'>
               <a
@@ -61,19 +47,11 @@ const Navigation = () => {
                 {jsonData.Navigation.contacts}
               </a>
             </li>
-            <li className='nav-item'>
-              <a
-                href= {jsonData.Navigation.gifermo}
-                className='nav-links'
-                onClick={closeMobileMenu}>
-               Gifermo
-              </a>
-            </li>
 
           </ul>
           
           </div>
-          <button href="#modal"
+          <button href="#contact"
               className="qbtn"
               onClick={closeMobileMenu}>
                 {jsonData.Navigation.getquote}
@@ -83,4 +61,4 @@ const Navigation = () => {
     )
 }
 
-export default Navigation;
+export default NavigationMaintenance;

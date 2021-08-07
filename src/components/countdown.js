@@ -4,6 +4,7 @@ import '../css/countdown.css'
 function countdown() {
     return (
         <div className="countdown">
+            <article>
         <section className="animation col">
             <div className="box">
                 <h1>A Trust Motores Oferece:</h1>
@@ -23,6 +24,7 @@ function countdown() {
                 Minutos
             </span>
         </section>
+        </article>
         </div>
     )
 }

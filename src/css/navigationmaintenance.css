@@ -1,63 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
-
-@font-face {
-	font-family: 'Edge Of Madness';
-	src: url('/src/fonts/EdgeOfMadness.ttf');
-}
-@font-face {
-	font-family: 'Mellinda Lopez';
-	src: url('/src/fonts/MellindaLopez.ttf');
-}
-@font-face {
-	font-family: 'University';
-	src: url('/src/fonts/University.otf');
-}
-:root {
-    --main-color: #303956;
-    --secondary-color: #c30000;
-}
-
-body, html {
-    font-family: "Bebas Neue", sans-serif;
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialised !important;
-    color: var(--main-color);
-    font-weight: 400;
-    width: 100% !important;
-    height: 100% !important;
-    box-sizing: border-box;
-    font-smooth: always;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-h2, h3,h4 {
-    font-family: "Bebas Neue", sans-serif;
-}
-
-li {
-    margin-bottom: 5px;
-}
-nav {
-	background: transparent;
-	font-family: 'Manrope', sans-serif;
-	height: 80px;
-	width: 100%;
-	display: flex;
-	font-weight: 700;
-	text-transform: uppercase;
-	justify-content: center;
-	align-items: center;
-	font-size: 1rem;
-	position:fixed;
-	top: 0;
-	margin: 0;
-	z-index: 999;
-}
-
 /* Navigation */
+
+
 .navbar {
 	background: transparent;
 	font-family: 'Manrope', sans-serif;
@@ -69,10 +12,11 @@ nav {
 	justify-content: center;
 	align-items: center;
 	font-size: 1rem;
-	position:fixed;
+	position: relative;
 	top: 0;
 	margin: 0;
 	z-index: 999;
+    
   }
   
   .navbar-container {
@@ -105,11 +49,11 @@ nav {
   
   .nav-menu {
 	display: grid;
-	grid-template-columns: repeat(5, auto);
+	grid-template-columns: repeat(1, auto);
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
-	width: 30vw;
+	width: 10vw;
 	justify-content: center;
   }
   
@@ -254,64 +198,3 @@ nav {
 	  transition: 250ms;
 	}
   }
-  
-
-  /* Home */
-
-  .home {
-	  display: flex;
-	  justify-content: flex-start;
-	  align-items: center;
-	  background-size: cover !important;
-	  background: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1627402804/Untitled-1_lq7oym.jpg");
-  }
-
-
-.home-row {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .home.home-column {
-	max-width: 100%;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-  }
-
-  .home.home-text{
-	max-width: 100%;
-	align-items: center;
-	justify-content: center;
-  }
-  
-  .home-text h1 {
-	  font-family: 900 "Rubik", sans-serif;
-	  font-weight: 900;
-	  font-size: 2rem;
-	  position: absolute;
-	  max-width: 100%;
-	  margin-right: 0;
-	  margin-left: 4%;
-	  margin-top: -5%;
-  }
-  .home-text ul {
-	text-decoration: none;
-	align-self: flex-end;
-	justify-content: center;
-	align-self: center;
-  }
-  .home-text ul li {
-	list-style-type: none;
-	font-family: "Mellinda Lopez";
-	max-width: 100%;
-	font-size: 2rem;
-	font-weight: 600;
-	margin-left: 15%;
-  }
-  
- 

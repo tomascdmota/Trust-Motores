@@ -1,38 +1,40 @@
-import React, {Component} from 'react'
-import '../css/contactform.css';
-import axios from 'axios';
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
+import React, {Component} from "react";
+import "../css/contactform.css";
+import axios from "axios";
 
 class Contact extends Component {
 	constructor(){
-		super()
+		super();
 
 		this.state = {
-			name: '',
-			email: '',
-			subject: '',
-			message: '',
+			name: "",
+			email: "",
+			subject: "",
+			message: "",
 			sent:false
-		}
+		};
 
-		this.handleChange = this.handleChange.bind(this)
-		this.handleSubmit = this.handleSubmit.bind(this)
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	
 	}
 	handleChange = e => {
-		this.setState({ [e.target.name]: e.target.value })
+		this.setState({ [e.target.name]: e.target.value });
 	}
 
 	async handleSubmit(e) {
-		e.preventDefault()
+		e.preventDefault();
 		const {name, email, subject, message} = this.state;
 
-		const form = await axios.post('/api/form', {
+		const form = await axios.post("/api/form", {
 			name, 
 			email,
 			subject,
 			message
 		});
-	};
+	}
 	
 
  render() {
@@ -70,8 +72,8 @@ class Contact extends Component {
 				</div>
 
 				<div className="container-contact1-form-btn">
-					<div className={this.state.sent ? 'msg msgAppear': 'msg'}></div>
-					<button type="submit" id="submit" className="contact1-form-btn" >
+					<div className={this.state.sent ? "msg msgAppear": "msg"}></div>
+					<button type="submit" id="submit" data-testid="button" className="contact1-form-btn" >
 						<span>
 							Enviar
 							<i className="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -83,7 +85,7 @@ class Contact extends Component {
 	</div>
             
         </div>
-    )
+    );
 	}
 }
 

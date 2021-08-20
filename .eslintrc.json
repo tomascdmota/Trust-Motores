@@ -1,8 +1,13 @@
 {
     "env": {
-        "browser": true
+        "commonjs": true,
+        "node": true,
+        "browser": true,
+        "es6": true,
+        "jest": true
     },
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended"],
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -10,12 +15,12 @@
         }
     },
     "plugins": [
-        "react"
+        "react",
+        "import"
     ],
     "rules": {
         "indent": [
-            "error",
-            "tab"
+            "off"
         ],
         "linebreak-style": [
             "error",
@@ -30,5 +35,10 @@
             "always"
         ],
         "jsx-a11y/href-no-hash": 0
+    },
+    "settings": {
+        "react": {
+            "version": "latest"
+        }
     }
 }

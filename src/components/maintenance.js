@@ -52,28 +52,7 @@ function Maintenance() {
         <section className="coming-soon">
             <div>
             <h1>Estamos em manutenção, em breve estaremos no ar.</h1>
-            <div className="countdown">
-                <div className="container-day">
-                    <h3 className="day">{timerDays}</h3>
-                    <h3>Dias</h3>
-                </div>
-
-                <div className="container-hour">
-                    <h3 className="hour">{timerHours}</h3>
-                    <h3>Horas</h3>
-                </div>
-
-                <div className="container-minute">
-                    <h3 className="minute">{timerMinutes}</h3>
-                    <h3>Minutos</h3>
-                </div>
-
-                <div className="container-seconds">
-                    <h3 className="second">{timerSeconds}</h3>
-                    <h3>Segundos</h3>
-                </div>
-
-            </div>
+            
             
             </div>
             <img className="waiting" src="https://res.cloudinary.com/dnho57ne8/image/upload/v1628004034/3685835_sp5t6h.svg" alt=""/>

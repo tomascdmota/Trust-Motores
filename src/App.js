@@ -27,7 +27,6 @@ export class App extends Component {
       <div>
       <NavigationMaintenance/>
       <Maintenance/>
-      <ContactForm/>
       <Footer/>
       </div>
     )

@@ -28,6 +28,7 @@ body {
    }
    .footer-paragraph-subtitle{
        color: #fff;
+       font-size: 1.2rem;
    }
     
    .footer-distributed .footer-left,
@@ -42,9 +43,17 @@ body {
    }
     
    .footer-distributed h3{
-    color:  #ffffff;
-    font: normal 50px 'Cookie', sans-serif;
-    margin: 0;
+    font-family: "Edge Of Madness";
+	color: #D52228;
+	letter-spacing: 3px;
+	cursor: default;
+	font-weight: 900;
+	margin-left: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.8em;
+	display: flex;
+	margin-right: auto;
    }
     
    .footer-distributed h3 span{
@@ -67,14 +76,14 @@ body {
     
    .footer-distributed .footer-company-name{
     color:  #fff;
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: normal;
     margin: 0;
    }
     
     
    .footer-distributed .footer-center{
-    width: 35%;
+    width: 25%;
    }
     
    .footer-distributed .footer-center i{
@@ -100,36 +109,39 @@ body {
     color: #ffffff;
     vertical-align: middle;
     margin:0;
+    font-size: 1.2rem;
    }
     
    .footer-distributed .footer-center p span{
     display:block;
     font-weight: normal;
-    font-size:14px;
+    font-size: 1.2rem;
     line-height:2;
    }
     
    .footer-distributed .footer-center p a{
     color:  #5383d3;
     text-decoration: none;
+    font-size: 1rem;
    }
     
    .footer-distributed .footer-right{
-    width: 20%;
+    width: 30%;
    }
     
    .footer-distributed .footer-company-about{
     line-height: 20px;
     color:  #fff;
-    font-size: 13px;
-    font-weight: normal;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    font-family: 'Barlow', Courier, monospace;
     margin: 0;
    }
     
    .footer-distributed .footer-company-about span{
     display: block;
-    color:  #ffffff;
-    font-size: 14px;
+    color: #D52228;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
    }
@@ -181,3 +193,17 @@ body {
     }
     
    }
+
+
+@media (max-width: 575.98px) {
+    .footer-distributed h3{
+        letter-spacing: 3px;
+        cursor: default;
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        display: flex;
+        margin-left: 25%;
+       }
+}

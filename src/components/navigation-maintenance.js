@@ -32,7 +32,6 @@ const NavigationMaintenance = () => {
                     <b>Trust Motores</b>
                 </h1>
                 <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
             <div className="navbar-container">
               

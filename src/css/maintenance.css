@@ -13,6 +13,7 @@ h1{
     font-size: 2rem;
     font-weight: bold;
     color: #fff;
+    margin: 10%;
 }
 h3 {
     color: #fff;
@@ -28,6 +29,9 @@ h3 {
 }
 
 
+.maintenance-title {
+    margin-bottom: 2%;
+}
 
 .countdown {
     height: 20vh;
@@ -48,4 +52,98 @@ h3 {
 .contact {
     font-size: 2rem;
     margin-top: 5%;
+}
+
+
+/* Different devices */
+
+
+
+@media (max-width: 1399.98px) {  }
+
+
+@media (max-width: 1199.98px) {  }
+
+
+@media screen and (max-width: 960px) {
+    .coming-soon {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .maintenance-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+	h1{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        margin: 10%;
+    }
+}
+
+
+@media(max-width: 767.98px) {
+    .coming-soon {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .maintenance-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3%;
+    }
+    .waiting{
+        height: 35vh;
+    }
+
+	h1{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        margin: 10%;
+    }
+}  
+
+@media (max-width: 575.98px){
+
+    .coming-soon {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .maintenance-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10%;
+    }
+
+    .waiting{
+        height: 35vh;
+    }
+
+	h1{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        margin: 10%;
+    }
 }

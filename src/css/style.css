@@ -5,7 +5,7 @@
 
 @font-face {
 	font-family: 'Edge Of Madness';
-	src: url('/src/fonts/EdgeOfMadness.ttf');
+	src: url('../fonts/EdgeOfMadness.ttf');
 }
 @font-face {
 	font-family: 'Mellinda Lopez';
@@ -177,6 +177,21 @@ nav {
 	.NavbarItems {
 	  position: relative;
 	}
+
+	.navbar-logo {
+		font-family: "Edge Of Madness";
+		color: #D52228;
+		letter-spacing: 3px;
+		cursor: default;
+		font-weight: 900;
+		margin-left: 0;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.4em;
+		display: flex;
+		margin-right: auto;
+		margin-left: 2rem;
+	  }
   
 	.nav-menu {
 	  display: flex;
@@ -254,6 +269,8 @@ nav {
 	  transition: 250ms;
 	}
   }
+
+
   
 
   /* Home */

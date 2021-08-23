@@ -50,14 +50,14 @@ function Maintenance() {
 
     return (
         <section className="coming-soon">
-            <div>
-            <h1>Estamos em manutenção, em breve estaremos no ar.</h1>
+            <div className="maintenance-title">
+            <h1 className="maintenance-title">Estamos em manutenção, em breve estaremos no ar.</h1>
             
             
             </div>
             <img className="waiting" src="https://res.cloudinary.com/dnho57ne8/image/upload/v1628004034/3685835_sp5t6h.svg" alt=""/>
 
-            <h1 className="contact" id="contact">CONTACTOS</h1>
+            <h1 className="contact" id="contact"></h1>
             
 
         </section>

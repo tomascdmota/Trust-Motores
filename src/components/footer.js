@@ -8,7 +8,7 @@ function footer() {
  
  <div className="footer-left">
  
- <h3>Trust<span>Motores</span></h3>
+ <h3>TrustMotores</h3>
  <p className="footer-paragraph-subtitle">Comercializadora de Produtos Automóvel</p>
  
  

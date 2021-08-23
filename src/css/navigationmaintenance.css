@@ -1,5 +1,9 @@
 /* Navigation */
 
+@font-face{
+	font-family: "Edge Of Madness";
+	src: url('../fonts/EdgeOfMadness.ttf');
+}
 
 .navbar {
 	background: transparent;
@@ -198,3 +202,170 @@
 	  transition: 250ms;
 	}
   }
+
+  @media (max-width: 1199.98px) { 
+	.navbar-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		min-width: 60vw;
+	  }
+
+	  .nav-links {
+		font-family: "Barlow";
+		color: #fff;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		padding: 0rem 1.2rem;
+		height: 100%;
+	  }
+	  
+	.navbar-logo {
+		font-family: "Edge Of Madness";
+		color: #D52228;
+		letter-spacing: 1px;
+		cursor: default;
+		font-weight: 900;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.2em;
+		display: flex;
+		margin-left: 0 ;
+		margin-right: 0px;
+		padding: .5rem .8rem;
+	  }
+
+	  .qbtn {
+		display: inline-block;
+		font:normal normal 300 1.2em 'Barlow';
+		font-weight: 700;
+		text-decoration:none;	
+		color:#fff;
+		background-color: var(--secondary-color);
+		border: 1.5px solid #fff;
+		border-radius: 80px;
+		padding: .3rem .8rem;
+		margin-right: 0;
+		background-size: 200% 100%;	
+	  }
+   }
+
+@media (max-width: 991.98px) { 
+	.navbar-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		min-width: 60vw;
+	  }
+
+	.navbar-logo {
+		font-family: "Edge Of Madness";
+		color: #D52228;
+		letter-spacing: 1px;
+		cursor: default;
+		font-weight: 900;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.2em;
+		display: flex;
+		margin-left: 0 ;
+		margin-right: 0px;
+		padding: .5rem .8rem;
+	  }
+
+	  .qbtn {
+		display: inline-block;
+		font:normal normal 300 1.2em 'Barlow';
+		font-weight: 700;
+		text-decoration:none;	
+		color:#fff;
+		background-color: var(--secondary-color);
+		border: 1.5px solid #fff;
+		border-radius: 80px;
+		padding: .3rem .8rem;
+		margin-right: 0;
+		background-size: 200% 100%;	
+	  }
+ }
+
+
+@media(max-width: 767.98px) {
+	.navbar-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		min-width: 60vw;
+	  }
+
+	.navbar-logo {
+		font-family: "Edge Of Madness";
+		color: #D52228;
+		letter-spacing: 1px;
+		cursor: default;
+		font-weight: 900;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.2em;
+		display: flex;
+		margin-left: 0 ;
+		margin-right: 0px;
+		padding: .5rem .8rem;
+	  }
+
+	  .qbtn {
+		display: inline-block;
+		font:normal normal 300 1.2em 'Barlow';
+		font-weight: 700;
+		text-decoration:none;	
+		color:#fff;
+		background-color: var(--secondary-color);
+		border: 1.5px solid #fff;
+		border-radius: 80px;
+		padding: .3rem .8rem;
+		margin-right: 0;
+		background-size: 200% 100%;	
+	  }
+}  
+
+@media (max-width: 575.98px){
+	.navbar-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		min-width: 60vw;
+	  }
+
+	.navbar-logo {
+		font-family: "Edge Of Madness";
+		color: #D52228;
+		letter-spacing: 1px;
+		cursor: default;
+		font-weight: 900;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.2em;
+		display: flex;
+		margin-left: 0 ;
+		margin-right: 0px;
+		padding: .5rem .8rem;
+	  }
+
+	  .qbtn {
+		display: inline-block;
+		font:normal normal 300 1.2em 'Barlow';
+		font-weight: 700;
+		text-decoration:none;	
+		color:#fff;
+		background-color: var(--secondary-color);
+		border: 1.5px solid #fff;
+		border-radius: 80px;
+		padding: .3rem .8rem;
+		margin-right: 0;
+		background-size: 200% 100%;	
+	  }
+}

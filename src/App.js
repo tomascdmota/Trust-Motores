@@ -2,13 +2,11 @@ import './App.css';
 import React, {Component} from 'react';
 import JSONData from './data/data.json';
 import './css/style.css';
-import Nav from './components/navigation';
 import Home from './components/home'
-import CountDown from './components/countdown';
-import Maintenance from './components/maintenance';
 import ContactForm from './components/Contact.js';
-import NavigationMaintenance from './components/navigation-maintenance';
 import Footer from './components/footer';
+import Navigation from './components/navigation';
+import GetQuote from './components/getquote';
 
 export class App extends Component {
   state = {
@@ -25,8 +23,10 @@ export class App extends Component {
   render() {
     return(
       <div>
-      <NavigationMaintenance/>
-      <Maintenance/>
+      <Navigation/>
+      <Home/>
+      <GetQuote/>
+      <ContactForm/>
       <Footer/>
       </div>
     )

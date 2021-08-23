@@ -9,5 +9,13 @@
 
     "Header": {
         
+    },
+
+    "GetQuote": {
+        "Motor": ["Novo", "Reconstruído"],
+        "Caixa de Velocidades": ["Nova", "Reconstruída"],
+        "Turbo": ["Novo", "Reconstruído"],
+        "Injetores": ["Novos", "Reconstruídos"],
+        "Outro": [""]
     }
 }

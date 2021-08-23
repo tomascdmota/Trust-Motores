@@ -8,11 +8,6 @@ const Home =() => {
             <div className='home-column'>
                 <div className="home-text">
                 <h1> Comércio De Produtos Automóvel<br></br></h1>
-                   <ul>
-                       <li>Motores</li>
-                       <li>Caixas de Velocidades</li>
-                       <li>Turbos</li>
-                   </ul>
                 
                 </div>
                 
@@ -20,8 +15,10 @@ const Home =() => {
             
         </div>
         </div>
+
         
     </section>
+    
     
     )
 }

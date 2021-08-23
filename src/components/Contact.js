@@ -38,6 +38,7 @@ class Contact extends Component {
  render() {
     return (
         <div>
+			<h1>Contacte-nos</h1>
      	<div className="contact1">
 		<div className="container-contact1">
 			<div className="contact1-pic js-tilt" data-tilt>

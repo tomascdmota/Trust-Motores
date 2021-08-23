@@ -5,7 +5,7 @@
 	src: url('../fonts/EdgeOfMadness.ttf');
 }
 
-.navbar {
+.navbar-maintenance {
 	background: transparent;
 	font-family: 'Manrope', sans-serif;
 	height: 80px;
@@ -51,7 +51,7 @@
 	font-size: 1.8rem;
   }
   
-  .nav-menu {
+  .nav-menu-maintenance {
 	display: grid;
 	grid-template-columns: repeat(1, auto);
 	grid-gap: 10px;

@@ -51,7 +51,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	font-size: 1rem;
-	position:fixed;
+	position: fixed;
 	top: 0;
 	margin: 0;
 	z-index: 999;
@@ -69,7 +69,8 @@ nav {
 	justify-content: center;
 	align-items: center;
 	font-size: 1rem;
-	position:fixed;
+	position: fixed;
+	flex-direction: row;
 	top: 0;
 	margin: 0;
 	z-index: 999;
@@ -105,11 +106,11 @@ nav {
   
   .nav-menu {
 	display: grid;
-	grid-template-columns: repeat(5, auto);
+	grid-template-columns: repeat(4, auto);
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
-	width: 30vw;
+	width: 40vw;
 	justify-content: center;
   }
   
@@ -280,12 +281,12 @@ nav {
 	  justify-content: flex-start;
 	  align-items: center;
 	  background-size: cover !important;
-	  background: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1627402804/Untitled-1_lq7oym.jpg");
+	  background: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1629726387/website-background_ipjjyr.svg");
   }
 
 
 .home-row {
-	height: 100vh;
+	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	flex-direction: row;
@@ -303,7 +304,7 @@ nav {
   .home.home-text{
 	max-width: 100%;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
   }
   
   .home-text h1 {
@@ -315,20 +316,6 @@ nav {
 	  margin-right: 0;
 	  margin-left: 4%;
 	  margin-top: -5%;
-  }
-  .home-text ul {
-	text-decoration: none;
-	align-self: flex-end;
-	justify-content: center;
-	align-self: center;
-  }
-  .home-text ul li {
-	list-style-type: none;
-	font-family: "Mellinda Lopez";
-	max-width: 100%;
-	font-size: 2rem;
-	font-weight: 600;
-	margin-left: 15%;
   }
   
  

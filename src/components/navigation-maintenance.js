@@ -27,7 +27,7 @@ const NavigationMaintenance = () => {
 
     return (
         <div>
-        <nav className="navbar">
+        <nav className="navbar-maintenance">
         <h1 href="/" className="navbar-logo" onClick={closeMobileMenu}>
                     <b>Trust Motores</b>
                 </h1>
@@ -35,7 +35,7 @@ const NavigationMaintenance = () => {
           </div>
             <div className="navbar-container">
               
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <ul className={click ? 'nav-menu-maintenance active' : 'nav-menu-maintenance'}>
             
             
             <li className='nav-item'>

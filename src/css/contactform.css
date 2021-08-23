@@ -97,6 +97,12 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Contact 1 ]*/
 
+.contact-title {
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+}
+
 .contact1 {
   width: 100%;
   min-height: 100%;

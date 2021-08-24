@@ -8,7 +8,7 @@ function footer() {
  
  <div className="footer-left">
  
- <h3>TrustMotores</h3>
+ <h1>TrustMotores</h1>
  <p className="footer-paragraph-subtitle">Comercializadora de Produtos Automóvel</p>
  
  
@@ -44,8 +44,8 @@ function footer() {
  
  <div className="footer-icons">
  
- <a href="https://www.facebook.com/profile.php?id=100067817771661" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
- <a href="https://www.instagram.com/trustmotores/?hl=en" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>
+ <a href="https://www.facebook.com/profile.php?id=100067817771661" label="facebook" name="facebook" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
+ <a href="https://www.instagram.com/trustmotores/?hl=en" label="instagram" name="instagram" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>
 
  
  </div>

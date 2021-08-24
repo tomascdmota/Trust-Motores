@@ -51,17 +51,17 @@ class Contact extends Component {
 				</span>
 
 				<div className="wrap-input1 validate-input" data-validate = "Name is required">
-					<input data-testid="form-name" className="input1" type="text" id="name" name="name" placeholder="Nome" value={this.state.name} onChange={this.handleChange}/>
+					<input data-testid="form-name" label="matricula" className="input1" type="text" id="name" name="name" placeholder="Nome" value={this.state.name} onChange={this.handleChange}/>
 					<span className="shadow-input1"></span>
 				</div>
 
 				<div className="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input className="input1" type="text" id="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleChange}/>
+					<input className="input1" label="email" type="text" id="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleChange}/>
 					<span className="shadow-input1"></span>
 				</div>
 
 				<div className="wrap-input1 validate-input" data-validate = "Subject is required">
-					<input className="input1" type="text" id="subject" name="subject" placeholder="Assunto" value={this.state.subject} onChange={this.handleChange}/>
+					<input className="input1" label="subject" type="text" id="subject" name="subject" placeholder="Assunto" value={this.state.subject} onChange={this.handleChange}/>
 					<span className="shadow-input1"></span>
 				</div>
 

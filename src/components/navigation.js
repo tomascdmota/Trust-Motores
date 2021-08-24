@@ -1,54 +1,52 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Component} from 'react'
 import jsonData from '../data/data.json'
+import Modal from './Modal.js';
 
-const Navigation = () => {
+class Navigation extends Component {
 
-    const [click, setClick] = useState(false);
-    const[button, setButton] = useState(true);
-    
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+  constructor() {
+    super();
+    this.state = {
+      //This hides the modal until the user prompts it to open
+      show: false
+    };
 
-    const showButton = () => {
-        if(window.innerWidth <= 960 ) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    }
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+  }
 
-    useEffect(() => {
-        showButton();
-      }, []);
-    
-      window.addEventListener('resize', showButton);
+  showModal = () => {
+    this.setState({show: true});
+  }
 
+  hideModal = () => {
+    this.setState({show: false});
+  }
 
+  render(){
     return (
         <div>
+          
         <nav className="navbar">
-        <h1 href="/" className="navbar-logo" onClick={closeMobileMenu}>
+        <h1 href="/" className="navbar-logo">
                     <b>Trust Motores</b>
                 </h1>
                 
             <div className="navbar-container">
               
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <ul className={'nav-menu'}>
             
             <li className='nav-item'>
               <a
                 href='#campanha'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
+                className='nav-links'>
                 {jsonData.Navigation.campaign}
               </a>
             </li>
             <li className='nav-item'>
               <a
                 href='#products'
-                className='nav-links'
-                onClick={closeMobileMenu}>
+                className='nav-links'>
                 {jsonData.Navigation.services}
               </a>
             </li>
@@ -56,16 +54,14 @@ const Navigation = () => {
             <li className='nav-item'>
               <a
                 href='#contact'
-                className='nav-links'
-                onClick={closeMobileMenu}>
+                className='nav-links'>
                 {jsonData.Navigation.contacts}
               </a>
             </li>
             <li className='nav-item'>
               <a
                 href= {jsonData.Navigation.gifermo}
-                className='nav-links'
-                onClick={closeMobileMenu}>
+                className='nav-links'>
                Gifermo
               </a>
             </li>
@@ -73,14 +69,19 @@ const Navigation = () => {
           </ul>
           
           </div>
-          <button href="#modal"
-              className="qbtn"
-              onClick={closeMobileMenu}>
+          <Modal show={this.state.show} handleClose={this.hideModal} ></Modal>
+          <button href="#getqt"
+              id="mybtn"
+              type="button"
+              onClick={this.showModal}
+              className="qbtn">
                 {jsonData.Navigation.getquote}
               </button>
       </nav>
+      
         </div>
     )
+}
 }
 
 export default Navigation;

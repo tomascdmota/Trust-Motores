@@ -42,7 +42,7 @@ body {
     width: 40%;
    }
     
-   .footer-distributed h3{
+   .footer-distributed h1{
     font-family: "Edge Of Madness";
 	color: #D52228;
 	letter-spacing: 3px;
@@ -55,10 +55,7 @@ body {
 	display: flex;
 	margin-right: auto;
    }
-    
-   .footer-distributed h3 span{
-    color:  #D52228;
-   }
+ 
     
     
    .footer-distributed .footer-links{
@@ -196,7 +193,7 @@ body {
 
 
 @media (max-width: 575.98px) {
-    .footer-distributed h3{
+    .footer-distributed h1{
         letter-spacing: 3px;
         cursor: default;
         font-weight: 900;

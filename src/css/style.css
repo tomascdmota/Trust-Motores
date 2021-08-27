@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 @font-face {
 	font-family: 'Edge Of Madness';
@@ -324,34 +325,23 @@ nav {
 
   .home {
 	  display: flex;
-	  justify-content: flex-start;
-	  align-items: center;
+	  position: relative;
+	  bottom: 0;
 	  background-size: cover !important;
 	  background: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1629726387/website-background_ipjjyr.svg");
   }
 
 
 .home-row {
-	height: 80vh;
+	height: 100vh;
+	width: 100vw;
 	display: flex;
-	flex-direction: column;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	position: relative;
+	justify-items: end;
+	justify-content: end;
+	align-items: end;
   }
   
-  .home.home-column {
-	max-width: 100%;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-  }
-
-  .home.home-text{
-	max-width: 100%;
-	align-items: center;
-	justify-content: flex-end;
-  }
   
   .home-text h1 {
 	  font-family: 900 "Rubik", sans-serif;
@@ -365,3 +355,5 @@ nav {
   }
   
  
+
+

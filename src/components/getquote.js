@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import '../css/getquote.css';
-import axios from 'axios';
-import jsonData from '../data/data.json';
 
 
 class getquote extends Component {

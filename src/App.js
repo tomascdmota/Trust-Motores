@@ -6,7 +6,7 @@ import Home from './components/home'
 import ContactForm from './components/Contact.js';
 import Footer from './components/footer';
 import Navigation from './components/navigation';
-import GetQuote from './components/getquote';
+import Features from './components/Features';
 
 export class App extends Component {
   state = {
@@ -25,7 +25,7 @@ export class App extends Component {
       <div>
       <Navigation/>
       <Home/>
-      <GetQuote/>
+      <Features/>
       <ContactForm/>
       <Footer/>
       </div>

@@ -1,10 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Contact from '../Contact';
+import {Form} from '../Contact';
  
 // 'it' means the component
 
-it('renders without crashing', () => {
-    const div = document.createElement("div");
-    ReactDOM.render(<Contact></Contact>, div)
+it('Should capture the name correctly', () => {
+    const component = mount(<Form/>)
+    const input = component.find('input').at(0);
+    input.instance().value = "HEllo";
+    input.simulate("change");
+    expect(component.state().name).toEqual('HEllo');
 })

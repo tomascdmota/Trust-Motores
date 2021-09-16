@@ -52,10 +52,7 @@ class Home extends Component {
     return(
     <section className="home">
         <div className='home-row'>
-                <div className="home-text">
-                <h1> Comércio De Produtos Automóvel<br></br></h1>
                 
-                </div>
                 
                 <div className="get-quote">
 		            <div className="quote-title" id="getqt">

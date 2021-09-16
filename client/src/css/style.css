@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
 @font-face {
 	font-family: 'Edge Of Madness';
 	src: url('../fonts/EdgeOfMadness.ttf');
@@ -222,9 +224,21 @@ nav {
   }
   
   @media screen and (max-width: 960px) {
-	.NavbarItems {
-	  position: relative;
+	
+
+	.navbar {
+		max-width: 100vw;
+		justify-content: flex-end;
 	}
+	 
+	.navbar-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		max-width: 10vw;
+	  }
+
 
 	.navbar-logo {
 		font-family: "Edge Of Madness";
@@ -232,13 +246,12 @@ nav {
 		letter-spacing: 3px;
 		cursor: default;
 		font-weight: 900;
-		margin-left: 0;
 		text-decoration: none;
 		text-transform: uppercase;
-		font-size: 1.4em;
+		font-size: 1.2em;
 		display: flex;
-		margin-right: auto;
-		margin-left: 2rem;
+		margin-top: 13px;
+		margin-left:0;
 	  }
   
 	.nav-menu {
@@ -247,6 +260,7 @@ nav {
 	  width: 100%;
 	  height: 90vh;
 	  position: absolute;
+	  visibility: unset;
 	  top: 80px;
 	  left: -100%;
 	  opacity: 1;
@@ -316,6 +330,55 @@ nav {
 	  color: #242424;
 	  transition: 250ms;
 	}
+
+	.qbtn {
+		padding: .6rem 1rem;
+		background-size: 200% 100%;	
+		}
+  }
+
+  @media screen and (max-width: 1000px) {
+	.navbar {
+		max-width: 100vw;
+		justify-content: flex-end;
+	}
+	 
+	.navbar-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		max-width: 10vw;
+	  }
+
+  
+	.nav-menu {
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	  height: 90vh;
+	  position: absolute;
+	  visibility: unset;
+	  top: 80px;
+	  left: -100%;
+	  opacity: 1;
+	  transition: all 0.5s ease;
+	}
+  
+	.nav-menu.active {
+	  background: #EFA01D;
+	  left: 0;
+	  opacity: 1;
+	  transition: all 0.5s ease;
+	  z-index: 1;
+	}
+  
+	.nav-links {
+	  text-align: center;
+	  padding: 1.2rem;
+	  width: 100%;
+	  display: table;
+	}
   }
 
 
@@ -337,23 +400,67 @@ nav {
 	width: 100vw;
 	display: flex;
 	position: relative;
-	justify-items: end;
-	justify-content: end;
-	align-items: end;
+	justify-items: start;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+
+  }
+  
+  
+  
+ 
+
+
+@media screen and (max-width: 1250px){
+	.home {
+		display: flex;
+		position: relative;
+		bottom: 0;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+		background: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1629726387/website-background_ipjjyr.svg");
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.home {
+		display: flex;
+		position: relative;
+		bottom: 0;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+		background: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1629726387/website-background_ipjjyr.svg");
+	}
+}
+
+@media screen and (max-width: 780px){
+	.home {
+		display: flex;
+		position: relative;
+		bottom: 0;
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+		background: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1629726387/website-background_ipjjyr.svg");
+	}
+
+.home-row {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
   }
   
   
   .home-text h1 {
 	  font-family: 900 "Rubik", sans-serif;
-	  font-weight: 900;
-	  font-size: 2rem;
-	  position: absolute;
+	  font-size: 1.5rem;
+	  position: relative;
 	  max-width: 100%;
+	  margin:0;
 	  margin-right: 0;
-	  margin-left: 4%;
-	  margin-top: -5%;
+	  margin-bottom: 0;
+	  margin-top: 30vh;
   }
-  
- 
-
-
+}

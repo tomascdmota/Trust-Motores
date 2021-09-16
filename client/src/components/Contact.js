@@ -1,9 +1,9 @@
-import React, {Component, useState} from 'react'
+import React, {Component, useState} from 'react';
 import '../css/contactform.css';
 
 const Contact = () => {
 	
-	const [status, setStatus] = useState("submit");
+	const [status, setStatus] = useState("enviar");
 
 	const handleSubmit = async(e) => {
 		e.preventDefault();
@@ -28,7 +28,7 @@ const Contact = () => {
 			body: JSON.stringify(details),
 		});
 
-		setStatus("Submit");
+		setStatus("Enviar");
 		let result = await response.json();
 		alert(result.status);
 	};
@@ -77,7 +77,6 @@ const Contact = () => {
 					<div className={status ? 'msg msgAppear': 'msg'}></div>
 					<button data-testid="contact-button" type="submit" id="submit" className="contact1-form-btn" >
 						<span>{status}
-							Enviar
 							<i className="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</span>
 					</button>

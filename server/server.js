@@ -30,10 +30,7 @@ contactEmail.verify((error) => {
 });
 
 router.post("/contact", (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    const subject = req.body.subject;
-    const message = req.body.message;
+    const {name, email, subject, message} = req.body;
     const mail = {
         from: name,
         to: "gifermo2@gmail.com",
@@ -53,3 +50,46 @@ router.post("/contact", (req, res) => {
     })
 });
 
+router.post("/modal", (req, res) => {
+    const {name, email, contact, message} = req.body;
+    const mail = {
+        from: name,
+        to: "geral@trustmotores.com",
+        html: `<p>Nome: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Contacto: ${contact}</p>
+        <p>Mensagem: ${message}</p>`
+    };
+
+    contactEmail.sendMail(mail, (error) => {
+        if(error){
+            res.json({status: "Error"})
+        } else {
+            res.json({status: "Mensagem enviada"})
+        }
+    })
+});
+
+
+
+router.post("/getQuote", (req,res) => {
+    const {mat, email, sub, part, spart} = req.body;
+    const mail = {
+        from: email,
+        to: "geral@trustmotores.com",
+        subject: sub,
+        html: `<p>Mat: ${mat}</p>
+        <p>Email: ${email}</p>
+        <p>Assunto: ${sub}</p>
+        <p>Peça: ${part}</p>
+        <p>Estado da Peça: ${spart}</p>`
+    };
+
+    contactEmail.sendMail(mail, (error) => {
+        if(error) {
+            res.json({status: "Error"})
+        } else {
+            res.json({status: "Mensagem enviada!"})
+        }
+    })
+})

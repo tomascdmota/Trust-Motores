@@ -3,7 +3,7 @@ import '../css/contactform.css';
 
 const Contact = () => {
 	
-	const [status, setStatus] = useState("enviar");
+	const [status, setStatus] = useState("Enviar");
 
 	const handleSubmit = async(e) => {
 		e.preventDefault();
@@ -28,7 +28,7 @@ const Contact = () => {
 			body: JSON.stringify(details),
 		});
 
-		setStatus("Enviar");
+		setStatus("A Enviar...");
 		let result = await response.json();
 		alert(result.status);
 	};

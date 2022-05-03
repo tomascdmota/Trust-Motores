@@ -1,54 +1,46 @@
-import React,{Component}  from 'react';
+import React,{Component, useState}  from 'react';
 import GetQuote from './getquote';
 
-class Home extends Component {
+const Home = () => {
 
-    constructor(){
-		super()
+    const [status, setStatus] = useState("Enviar");
 
-		this.state = {
-			name: '',
-			email: '',
-			subject: '',
-			message: '',
-			sent:false
-		}
+  
 
-		this.handleChange = this.handleChange.bind(this)
+   
+    const handleSubmit = async(e) => {
+        e.preventDefault();
+        setStatus("A enviar");
 
 
-        // Defining vars for the cascading dropdown
-
-       this.state = {
-           DDL1: [],
-           DDL2: [],
-           selectDDL: ''
-       }
-	}
-	handleChange = e => {
-		this.setState({ [e.target.name]: e.target.value })
-	}
+        const {mat, email, sub, part, spart } = e.target.elements;
 
 
+        let details = {
+            mat: mat.value,
+            email: email.value,
+            sub: sub.value,
+            part: part.value,
+            spart: spart.value
+        };
 
-    componentDidMount() {
-        this.setState({
-            DDL1:[
-                 {name: 'Motor', DDL2: ['Novo', 'Reconstruído']},
-                 {name: 'Caixa de velocidades', DDL2: ['Nova', 'Reconstruída']},
-                 {name: 'Turbo', DDL2:['Novo', 'Reconstruído']},
-                 {name: 'Injetor',  DDL2: ['Novo', 'Reconstruído']},
-                 {name: 'Reparação / Orçamento', DDL2: ['Motor', 'Caixa de velocidades', 'Turbo']}
-            ]
-        })
+        // Response to be sent
+
+        let response = await fetch("http://localhost:3002/getQuote", {
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json;charset=utf-8",
+            },
+            body: JSON.stringify(details),
+        });
+
+        setStatus("Mensagem Enviada!")
+        let result = await response.json();
+        alert(result.status)
     }
 
-    selectChange(e) {
-        this.setState({selectDDL: e.target.value});
-        this.setState({DDL2: this.state.DDL1.find( x=> x.name === e.target.value).DDL2});
-    }
 
-    render() {
+   
     return(
     <section className="home">
         <div className='home-row'>
@@ -60,42 +52,35 @@ class Home extends Component {
                  </h1>
 				</div>
 
-			<form data-testid="form"  className="form-inline" onSubmit={this.handleSubmit} >
+			<form data-testid="form"  className="form-inline" onSubmit={e => {handleSubmit(e)}} >
 
 
 				<div className="validate-input" data-validate = "Matricula is required">
-					<input data-testid="form-name" label="matricula" className="input-box" type="text" id="name" name="matricula" placeholder="Matrícula" value={this.state.name} onChange={this.handleChange}/>
+					<input data-testid="form-name" label="matricula" className="input-box" type="text" id="mat" name="matricula" placeholder="Matrícula" />
 				</div>
 
 				<div className="validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input className="input-box" label="email" type="text" id="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleChange}/>
+					<input className="input-box" label="email" type="email" id="email" name="email" placeholder="Email" />
 				</div>
 
 				<div className="validate-input" data-validate = "Subject is required">
-					<input className="input-box" label="subject" type="text" id="subject" name="subject" placeholder="Assunto" value={this.state.subject} onChange={this.handleChange}/>
+					<input className="input-box" label="subject" type="text" id="sub" name="subject" placeholder="Assunto" />
 				</div>
 
-                <select value={this.state.selectDDL} label="peça" onChange={this.selectChange.bind(this)}>
-                    <option value=""  >Peça</option>
-                    {this.state.DDL1.map( x=> {
-                        return <option>{x.name}</option>
+                <div className="validate-input" data-validate = "Part is required">
+					<input className="input-box" label="part" type="text" id="part" name="part" placeholder="Peça" />
+				</div>
 
-                    })}
-                </select>
-
-                <select key="value" label="value">
-                    <option value="">-------</option>
-                    {this.state.DDL2.map(x=>{
-                        return <option>{x}</option>
-                    })}
-                </select>
+               
+                <div className="validate-input" data-validate = "Condição is required">
+					<input className="input-box" label="spart" type="text" id="spart" name="spart" placeholder="Condição da Peça" />
+				</div>
 
 
 				<div className="container-contact1-form-btn">
-					<div className={this.state.sent ? 'msg msgAppear': 'msg'}></div>
 					<button data-testid="contact-button" type="submit" id="submit" className="contact1-form-btn" >
 						<span>
-							Enviar
+							{status}
 						</span>
 					</button>
 				</div>
@@ -109,7 +94,6 @@ class Home extends Component {
     
     
     )
-}
 }
 
 export default Home;

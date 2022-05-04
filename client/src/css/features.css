@@ -47,7 +47,6 @@ body {
     box-sizing: content-box;
     position: relative;
     outline: none;
-    border-bottom: 1px solid gray;
 }
 
 .tabs:not(:last-child){

@@ -27,7 +27,7 @@ function Navigation() {
               
           <ul className={'nav-menu'}>
             
-            <Link to="/campaign">
+            <Link to="/campaign" className='nav-links'>
               <li className='nav-item'>
                 <a
                   className='nav-links'>
@@ -36,7 +36,7 @@ function Navigation() {
               </li>
             </Link>
 
-            <Link to="/services">
+            <Link to="/services"  className='nav-links'>
               <li className='nav-item'>
                 <a
                   className='nav-links'>
@@ -45,7 +45,7 @@ function Navigation() {
               </li>
               </Link>
 
-              <Link to="/contacts">
+              <Link to="/contacts" className='nav-links'>
                 <li className='nav-item'>
                     <a
                       className='nav-links'>

@@ -120,6 +120,10 @@ nav {
   
   .nav-item {
 	height: 80px;
+	text-decoration: none !important;
+  }
+  link{
+	text-decoration: none !important;
   }
   
   .nav-links {
@@ -127,7 +131,7 @@ nav {
 	color: #fff;
 	display: flex;
 	align-items: center;
-	text-decoration: none;
+	text-decoration: none !important;
 	padding: 0rem 1.2rem;
 	height: 100%;
   }
@@ -140,7 +144,7 @@ nav {
 	color:#fff;
 	background-color: var(--secondary-color);
 	border: 1.5px solid #fff;
-	border-radius: 80px;
+	border-radius: 12px;
 	padding: .6rem 1rem;
 	margin-right: 10%;
 	background-size: 200% 100%;	

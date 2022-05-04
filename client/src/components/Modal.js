@@ -4,38 +4,37 @@ import Contact from './Contact'
 
 const Modal = ({handleClose}) => {
 
-
-    const [status, setStatus] = useState("Enviar");
+    const [status, setStatus] = useState("enviar");
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        setStatus("A enviar...")
+        setStatus("Sending...");
 
-        const {name, email, contact, message} = e.target.elements;
+        const {name, email, tel, message} = e.target.elements;
 
-        // Details of the email
+        // Info on the email
         let details = {
             name: name.value,
             email: email.value,
-            contact: contact.value,
+            tel: tel.value,
             message: message.value
         }
 
-        // Post request to send the data to the backend
-        let response = await fetch("http://localhost:3002/modal", {
-            method: "POST",
-            headers: {
-                "Content-Type":"application/json;charset=utf-8",
-            },
-            body: JSON.stringify(details),
-        });
+        //Response to be sent to the backend
 
-        setStatus("A Enviar...");
-        let result = await response.json();
-        alert(result.status);
-        setStatus("Enviado.")
+        let response = await fetch("http://localhost:3002/modal",{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(details),
+    });
 
+    setStatus("A enviar");
+    let result = await response.json();
+    alert(result.status)
     }
+
 
 
     // Children is a reference to props.children that represents the opening and closing of the modal
@@ -67,20 +66,21 @@ const Modal = ({handleClose}) => {
                                 <form onSubmit={handleSubmit}>
                                 <div class="app-form">
                                     <div class="app-form-group">
-                                        <input class="app-form-control" placeholder="Nome" id="name" />
+
+                                        <input class="app-form-control" placeholder="Nome" type="text" id="name" required/>
                                     </div>
                                     <div class="app-form-group">
-                                        <input class="app-form-control" placeholder="Email" id="email" />
+                                        <input class="app-form-control" placeholder="Email" type="email" id="email" required />
                                     </div>
                                     <div class="app-form-group">
-                                        <input class="app-form-control" placeholder="Contacto" id="contact"/>
+                                        <input class="app-form-control" placeholder="Contacto" type="tel" id="tel" required/>
                                     </div>
                                     <div class="app-form-group message">
-                                        <input class="app-form-control" placeholder="Mensagem" id="message"/>
+                                        <input class="app-form-control" placeholder="Mensagem" type="text" id="message" required/>
                                     </div>
                                     <div class="app-form-group buttons">
                                         <button onClick={handleClose} class="app-form-button">Cancelar</button>
-                                        <button class="app-form-button">{status}</button>
+                                        <button class="app-form-button" id="submit">Enviar</button>
                                     </div>
                                 </div>
                                 </form>

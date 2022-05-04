@@ -1,6 +1,7 @@
 import React, {useState, useEffect, Component} from 'react'
 import jsonData from '../data/data.json'
 import Modal from './Modal.js';
+import {Link} from "react-router-dom"
 
 function Navigation() {
 
@@ -18,36 +19,41 @@ function Navigation() {
         <div>
           
         <nav className="navbar">
-        <h1 href="/" className="navbar-logo">
-                    <b>Trust Motores</b>
-                </h1>
-                
+              <h1 className="navbar-logo">
+                  <b>Trust Motores</b>
+              </h1>
+
             <div className="navbar-container">
               
           <ul className={'nav-menu'}>
             
-            <li className='nav-item'>
-              <a
-                href='#campanha'
-                className='nav-links'>
-                {jsonData.Navigation.campaign}
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a
-                href='#products'
-                className='nav-links'>
-                {jsonData.Navigation.services}
-              </a>
-            </li>
-            
-            <li className='nav-item'>
-              <a
-                href='#contact'
-                className='nav-links'>
-                {jsonData.Navigation.contacts}
-              </a>
-            </li>
+            <Link to="/campaign">
+              <li className='nav-item'>
+                <a
+                  className='nav-links'>
+                  {jsonData.Navigation.campaign}
+                </a>
+              </li>
+            </Link>
+
+            <Link to="/services">
+              <li className='nav-item'>
+                <a
+                  className='nav-links'>
+                  {jsonData.Navigation.services}
+                </a>
+              </li>
+              </Link>
+
+              <Link to="/contacts">
+                <li className='nav-item'>
+                    <a
+                      className='nav-links'>
+                      {jsonData.Navigation.contacts}
+                    </a>
+                </li>
+              </Link>
+
             <li className='nav-item'>
               <a
                 href= {jsonData.Navigation.gifermo}

@@ -26,6 +26,7 @@ function admin() {
       </div>
       </div>
   ]
+
 }
 
 export default admin

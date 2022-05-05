@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import '../css/features.css'
 import Motores from './featuresComponents/featuresmotores';
 import Caixas from './featuresComponents/featurescaixas';

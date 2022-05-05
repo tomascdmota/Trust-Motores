@@ -9,7 +9,7 @@ export default function featurescaixas() {
                         <div className="features-motores-container">
 
                         <div className="split left">      
-                        <img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1631615245/pngwing.com_cejf6i.png"/>
+                        <img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1631615245/pngwing.com_cejf6i.png" alt="caixa"/>
                             </div>   
                                  
                     <div className="split right">

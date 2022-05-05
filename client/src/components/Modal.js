@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../css/modal.css';
-import Contact from './Contact'
 
 const Modal = ({handleClose}) => {
 
@@ -9,6 +8,7 @@ const Modal = ({handleClose}) => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         setStatus("Sending...");
+        console.log(status);
 
         const {name, email, tel, message} = e.target.elements;
 
@@ -51,7 +51,7 @@ const Modal = ({handleClose}) => {
                                 <div class="screen-header-button minimize"></div>
                             </div>
                             <div class="screen-header-right">
-                            <button onClick={handleClose} ><img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1631613546/image_2_bp0lsh.svg"/></button>
+                            <button onClick={handleClose} ><img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1631613546/image_2_bp0lsh.svg" alt="modal-button"/></button>
                             </div>
                         </div>
                         <div class="screen-body">

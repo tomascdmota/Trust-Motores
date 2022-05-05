@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Home from '../home'
-import Contact from '../Contact'
-import Footer from '../footer'
-import Navigation from '../navigation'
-import Features from '../Features'
+
+// Added lazy loading for slower internet users.
+const Contact = React.lazy(() => import('../Contact'));
+const Footer = React.lazy(() => import("../footer"));
+const Navigation = React.lazy(() => import("../navigation"));
+const Features = React.lazy(() => import("../Features"));
 
 function general() {
   return (
     <div>
         <Home/>
+        <Suspense fallback={<p>Loading page...</p>}>
         <Navigation/>
         <Features/>
         <Contact/>
         <Footer/>
+        </Suspense>
     </div>
   )
 }

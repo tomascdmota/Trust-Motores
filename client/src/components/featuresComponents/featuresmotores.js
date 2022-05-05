@@ -10,7 +10,7 @@ export default function featuresmotores() {
                             <div className="features-motores-container">
 
                             <div className="split left">      
-                            <img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1630568859/engine-nobg_rxoyz4.png"/>
+                            <img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1630568859/engine-nobg_rxoyz4.png" alt="engine"/>
                                 </div>   
                                      
                         <div className="split right">

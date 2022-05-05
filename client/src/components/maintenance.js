@@ -55,7 +55,7 @@ function Maintenance() {
             
             
             </div>
-            <img className="waiting" src="https://res.cloudinary.com/dnho57ne8/image/upload/v1628004034/3685835_sp5t6h.svg" alt=""/>
+            <img className="waiting" src="https://res.cloudinary.com/dnho57ne8/image/upload/v1628004034/3685835_sp5t6h.svg" alt="maintenance-image"/>
 
             <h1 className="contact" id="contact"></h1>
             

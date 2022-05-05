@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import '../css/contactform.css';
 
 const Contact = () => {
@@ -10,6 +10,7 @@ const Contact = () => {
 	const [message, setMessage] = useState('');
 
 	const handleSubmit = async(e) => {
+		// Prevents it from submiting the form immediately after clicking the submit button (useful for form validation)
 		e.preventDefault();
 		setStatus("Sending...");
 
@@ -24,7 +25,7 @@ const Contact = () => {
 		};
 
 		// Response to be sent 
-		let response = await fetch("https://www.trustmotores.com/app/contact", {
+		let response = await fetch("https://www.trustmotores.com/contact", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json;charset=utf-8",

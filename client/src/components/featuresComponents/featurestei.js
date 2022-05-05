@@ -9,7 +9,7 @@ export default function featurestei() {
                         <div className="features-tei-container">
 
                         <div className="split left">      
-                        <img  src="https://res.cloudinary.com/dnho57ne8/image/upload/v1631615313/pngwing.com_1_xh0vgg.png"/>
+                        <img  src="https://res.cloudinary.com/dnho57ne8/image/upload/v1631615313/pngwing.com_1_xh0vgg.png" alt="tei"/>
                             </div>   
                                  
                     <div className="split right">

@@ -1,4 +1,4 @@
-import React,{Component, useState}  from 'react';
+import React,{useState}  from 'react';
 import GetQuote from './getquote';
 
 const Home = () => {
@@ -26,7 +26,7 @@ const Home = () => {
 
         // Response to be sent
 
-        let response = await fetch("http://localhost:3002/getQuote", {
+        let response = await fetch("https://www.trustmotores.com/getQuote", {
             method: "POST",
             headers: {
                 "Content-Type":"application/json;charset=utf-8",

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Component} from 'react'
+import React, {useState} from 'react'
 import jsonData from '../data/data.json'
 import Modal from './Modal.js';
 import {Link} from "react-router-dom"
@@ -29,28 +29,28 @@ function Navigation() {
             
             <Link to="/campaign" className='nav-links'>
               <li className='nav-item'>
-                <a
+                <div
                   className='nav-links'>
                   {jsonData.Navigation.campaign}
-                </a>
+                </div>
               </li>
             </Link>
 
             <Link to="/services"  className='nav-links'>
               <li className='nav-item'>
-                <a
+                <div
                   className='nav-links'>
                   {jsonData.Navigation.services}
-                </a>
+                </div>
               </li>
               </Link>
 
               <Link to="/contacts" className='nav-links'>
                 <li className='nav-item'>
-                    <a
+                    <div
                       className='nav-links'>
                       {jsonData.Navigation.contacts}
-                    </a>
+                    </div>
                 </li>
               </Link>
 

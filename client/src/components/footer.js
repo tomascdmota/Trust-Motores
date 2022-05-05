@@ -13,7 +13,7 @@ function footer() {
  
  
  
- <p className="footer-company-name">Trust Motores &copy; 2021</p>
+ <p className="footer-company-name">Trust Motores &copy; 2022</p>
  </div>
  
  <div className="footer-center">

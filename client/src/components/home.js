@@ -1,7 +1,6 @@
 import React,{useState}  from 'react';
 import GetQuote from './CustomComponents/GetQuote/getquote';
 import Modal from './CustomComponents/Modal/Modal';
-import 'react-animated-slider/build/horizontal.css';
 import "../css/style.css"
 
 const Home = () => {

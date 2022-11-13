@@ -10,7 +10,7 @@
     bottom: 1vh;
     z-index: 999;
     border-radius: 50px;
-    opacity: 95%;
+    opacity: 0.95;
   }
 
   .quote-title h1 {

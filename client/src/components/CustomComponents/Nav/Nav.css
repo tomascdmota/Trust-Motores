@@ -11,7 +11,6 @@ nav {
 	align-items: center;
 	font-size: 1rem;
 	position: fixed;
-	opacity: 0.95;
 	top: 0;
 	margin: 0;
 	z-index: 999;
@@ -33,7 +32,7 @@ nav {
 	top: 0;
 	margin: 0;
 	z-index: 999;
-	opacity: 95%;
+	opacity: 0.95 !important;
     
   }
   

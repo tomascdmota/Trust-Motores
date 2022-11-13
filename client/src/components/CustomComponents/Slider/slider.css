@@ -1,0 +1,30 @@
+.slider {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+.slide {
+    position: relative;
+    border: 1px solid blue;
+    width: 100%;
+    height: 90vh;
+}
+
+#goLeft {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 5%;
+}
+
+#goRight {
+    position: absolute;
+}

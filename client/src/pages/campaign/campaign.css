@@ -1,0 +1,98 @@
+@font-face{
+	font-family: "Edge Of Madness";
+	src: url('../../fonts/EdgeOfMadness.ttf');
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    padding: 20px;
+    padding-top: 10vh;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    flex-direction: row;
+    z-index: 0;
+}
+
+.left {
+    width: 50vw;
+    height: 100%;
+    margin-left: 10vw;
+}
+
+img {
+    height: 70vh;
+}
+
+
+.right{
+    width: 60vw;
+    right: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10vh;
+}
+
+.offer {
+    display: flex;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.centered {
+    position: absolute;
+    text-align:start;
+    padding-top: 10vh;
+}
+
+.campaign-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font: normal 900 3em 'Barlow';
+    max-height: 10vh;
+    padding-top: 20vh;
+    margin-bottom: 5vh;
+}
+
+.campaign-body{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.list p{
+    color: #656364;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+
+.campaign-title {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: rgba(213,34,40,1);
+    padding-bottom: 2rem;
+    font-weight: bold;
+}
+
+
+.get-in-touch-button {
+    background-color: rgba(213,34,40,1);
+    margin-top: 50px;
+    border-radius: 10px;
+    font: normal 300 1.3em 'Barlow';
+}

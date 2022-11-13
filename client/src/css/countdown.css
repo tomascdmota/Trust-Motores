@@ -1,0 +1,38 @@
+:root{
+    /*background color*/
+    --anim_back_1: #090E1A;
+    --anim_back_2: #303952;
+    --time_back_1: #c30000;
+    --time_back_2: #c30000;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box h1 {
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.container {
+    width: 100vw;
+    background: var(--anim_back_1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+}
+.countdown {
+    display: flex;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+}
+

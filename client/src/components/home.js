@@ -6,6 +6,16 @@ import "../css/style.css"
 
 const Home = () => {
 
+    const [showModal, setShowModal] = useState(false);
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
+    const modal = () => {
+        setShowModal(true);
+    }
+
     return(
     <section className="split">
        
@@ -21,11 +31,12 @@ const Home = () => {
                             </p>
                         </div>
 
-                        <button className='get-in-touch-button'>Saber mais</button>
+                        <button className='get-in-touch-button' onClick={modal}>Saber mais</button>
                         </div>
                     </div>
                     <div className='right '><img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1667854926/My_project_1_nudtri.png"/></div>
 			<GetQuote/>
+            {showModal ? <Modal show={showModal} handleClose={closeModal}/> :null}
             
         </div>
         

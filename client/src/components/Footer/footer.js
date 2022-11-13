@@ -25,7 +25,7 @@ function footer() {
  
  <div>
  <i className="fa fa-phone"></i>
- <p>+351 963 824 837</p>
+ <p>+351 963 093 702</p>
  </div>
  
  <div>
@@ -39,7 +39,7 @@ function footer() {
  
  <p className="footer-company-about">
  <span>Sobre nós</span>
- <i>Comercializadora de produtos auto. </i> Somos uma empresa dinâmica e especializada no comércio de produtos auto desde, motores, caixas de velocidades, turbos, injetores e mais. O nosso foco está na entrega de produtos de alta qualidade, novos e reconstruídos, visando satisfazer as necessidades do cliente. Com isto em mente, trabalhamos com as melhores fábricas nacionais e estrangeiras, para garantir que conseguimos oferecer os preços mais adequados a cada situação.
+Somos uma empresa dinâmica e especializada no comércio de produtos auto desde, motores, caixas de velocidades, turbos, injetores e mais. O nosso foco está na entrega de produtos de alta qualidade, novos e reconstruídos, visando satisfazer as necessidades do cliente. Com isto em mente, trabalhamos com as melhores fábricas nacionais e estrangeiras, para garantir que conseguimos oferecer os preços mais adequados a cada situação.
  </p>
  
  <div className="footer-icons">

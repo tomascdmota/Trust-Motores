@@ -1,9 +1,9 @@
 {
   "name": "trustmotores",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://trustmotores.com",
-  "proxy": "http://localhost:3000",
+  "proxy": "http://trustmotores.com",
   "type": "module",
   "jsx": "react-jsx",
   "dependencies": {
@@ -53,7 +53,7 @@
     }
   },
   "scripts": {
-    "start": "  react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",

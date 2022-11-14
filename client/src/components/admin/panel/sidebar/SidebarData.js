@@ -4,7 +4,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import SettingsIcon from '@mui/icons-material/Settings';
-import MenuIcon from '@mui/icons-material/Menu';
 
 export const SidebarData = [
    

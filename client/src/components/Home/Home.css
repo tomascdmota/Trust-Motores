@@ -10,20 +10,20 @@
     align-items: center;
     color: red;
     padding: 20px;
-    margin-top: 5vh;
-    font-size: 2rem;
-    z-index: 999;
+    padding-top: 10vh;
+    margin-bottom: -10vh;
 }
 
 .split {
-    height: 80%;
+    height: 100%;
     width: 50%;
     position: relative;
     flex-direction: row;
     z-index: 0;
+    padding-bottom: 30px;
 }
 
-.left {
+.home-left {
     width: 50vw;
     height: 100%;
     margin-left: 10vw;
@@ -43,15 +43,19 @@ img {
     justify-content: flex-start;
     align-items: flex-start;
 }
-  
+    
+.offer {
+    display: flex;
+    color: #fff;
+    padding-bottom: 20px;
+}
 
-.centered {
+.home-centered {
     position: absolute;
     text-align: flex-start;
 }
 
-.campaign-title{
-    background-color: transparent;
+.home-campaign-title{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,11 +63,13 @@ img {
     font: normal 900 3em 'Barlow';
     max-height: 10vh;
     padding-top: 20vh;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
+    display: flex;
+    color: rgba(213,34,40,1);
 }
 
-.campaign-body{
-    height: 80vh;
+.home-campaign{
+    height: 90vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,26 +77,16 @@ img {
     z-index: -1;
 }
 
-.list li{
+.list p{
     color: #656364;
     font-size: 1.1rem;
     text-transform: uppercase;
 }
 
-
-.campaign-title {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    color: rgba(213,34,40,1);
-    padding-bottom: 2rem;
-    font-weight: bold;
-}
-
-
-.get-in-touch-button {
+.home-get-in-touch-button {
     background-color: rgba(213,34,40,1);
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 10px;
     font: normal 300 1.3em 'Barlow';
 }
+

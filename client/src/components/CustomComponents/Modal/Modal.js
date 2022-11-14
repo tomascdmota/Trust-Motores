@@ -40,7 +40,7 @@ const Modal = ({handleClose}) => {
     // Children is a reference to props.children that represents the opening and closing of the modal
 
     return (
-        <div className="modal">
+        <div className="modal" data-testid="modal">
             <div className="background">
                 <div className="container">
                     <div className="screen">
@@ -57,7 +57,7 @@ const Modal = ({handleClose}) => {
                         <div className="screen-body">
                             <div className="screen-body-item left">
                                 <div className="app-title">
-                                    <span>CONTACT US</span>
+                                    <span>CONTACTE-NOS</span>
                                 </div>
                                 <div className="app-contact">Contactos: (+351) 219 258 363 / 963 824 837 </div>
                             </div>

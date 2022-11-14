@@ -30,7 +30,7 @@ function admin() {
   useEffect(() => {
     // Creates a route to get the value of session that is being sent from the backend
     axios.get("http://localhost:3001/login").then((response) => {
-    if(response.data.loggedIn == true){
+    if(response.data.loggedIn === true){
       navigate("/panel");  
     }  
     }); 

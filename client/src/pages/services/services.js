@@ -1,8 +1,12 @@
 import React from 'react'
+import Navigation from"../../components/CustomComponents/Nav/Nav";
 
 function services() {
-  return (
-    <div>services</div>
+    return (<div>
+              <Navigation/>
+              <div>services</div>
+           </div>
+    
   )
 }
 

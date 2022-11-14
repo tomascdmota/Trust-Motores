@@ -27,9 +27,9 @@ export default function Home() {
             headers: {
                 "Content-Type": "multipart/data"
             }
-        }) .then((res) => {
+        }).then((res) => {
             //add successfully uploaded file
-        }) .catch((err) => {
+        }).catch((err) => {
             console.log(err);
         })
     }

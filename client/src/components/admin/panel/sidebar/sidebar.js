@@ -29,7 +29,7 @@ export default function Sidebar() {
                 // here we are gonna map through the array in order to display the data on the sidebar
                 return <li key={key} 
                 className="row"
-                id={window.location.path == val.link ? "active" : ""}
+                id={window.location.path === val.link ? "active" : ""}
                 onClick={() => {window.location.pathname = "/panel" + val.link}}>
                     {""}
                         

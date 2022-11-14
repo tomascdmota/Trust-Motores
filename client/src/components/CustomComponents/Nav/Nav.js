@@ -19,16 +19,22 @@ function Navigationpages() {
 
     return (
         <div>
-          
-        <nav className="nav">
-              <h1 className="navbar-logo">
+        <nav className="nav" data-testid="navigation">
+              <h1 className="navbar-logo" data-testid="navbar-logo">
                   <b>Trust Motores</b>
               </h1>
-
-            <div className="navbar-container">
-              
+            <div className="navbar-container" data-testid="navbar-container">
           <ul className={'nav-menu'}>
             
+          <Link to="/" className='nav-links'>
+              <li className='nav-item'>
+                <div
+                  className='nav-links'>
+                  {jsonData.Navigation.home}
+                </div>
+              </li>
+            </Link>
+
             <Link to="/campaign" className='nav-links'>
               <li className='nav-item'>
                 <div
@@ -56,13 +62,7 @@ function Navigationpages() {
                 </li>
               </Link>
 
-            <li className='nav-item'>
-              <a
-                href= {jsonData.Navigation.gifermo}
-                className='nav-links'>
-               Gifermo
-              </a>
-            </li>
+         
 
           </ul>
           
@@ -73,7 +73,8 @@ function Navigationpages() {
               id="mybtn"
               type="button"
               onClick={modal}
-              className="qbtn">
+              className="qbtn"
+              data-testid="qbtn">
                 {jsonData.Navigation.getquote}
               </button>
               

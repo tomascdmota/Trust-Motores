@@ -1,3 +1,5 @@
+  
+  
   .modal {
     position: fixed;
     top: 0;
@@ -17,8 +19,8 @@
   }
   
   .container {
-    flex: 0 1 700px;
-    width: 800px;
+    flex: 1  800px;
+    width: 900px;
     margin: auto;
     padding: 10px;
   }
@@ -95,28 +97,31 @@
   
   .screen-body {
     display: flex;
+    background-image: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1668443175/iu_nkd2pb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   .screen-body-item {
+    width: 30vw;
     flex: 1;
-    padding: 50px;
-    background-color: #fff;
+    padding: 60px;
   }
   
   .screen-body-item.left {
     display: flex;
+    width: 50%;
     height: auto;
+    left: 0;
+    background: transparent;
     flex-direction: column;
-    background-image: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1651762774/9ff72d9c381ffa165e4bf2776fd921b8_scqrd1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
   }
   
   .app-title {
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #ea1d6f;
+    color: red;
     font-size: 26px;
   }
   
@@ -132,10 +137,10 @@
   }
   
   .app-contact {
-    padding: 10px;
+    padding: 5px;
     margin-top: auto;
-    font-size: .9rem;
-    color: #888;
+    font-size: 1.2rem;
+    color: #fff;
   }
   
   .app-form-group {
@@ -154,11 +159,11 @@
   
   .app-form-control {
     width: 100%;
-    padding: 10px 0;
+    padding: 0px;
     background: none;
     border: none;
-    border-bottom: 1px solid rgb(0,0,0);
-    color: #666;
+    border-bottom: 1px solid rgb(256,256,256);
+    color: #fff;
     font-size: 14px;
     text-transform: uppercase;
     outline: none;
@@ -166,7 +171,7 @@
   }
   
   .app-form-control::placeholder {
-    color: #666;
+    color: #fff;
   }
   
   .app-form-control:focus {

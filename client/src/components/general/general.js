@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import Home from '../home'
+import Home from '../Home/home'
 
 // Added lazy loading for slower internet users.
 const Contact = React.lazy(() => import('../Contact/Contact'));

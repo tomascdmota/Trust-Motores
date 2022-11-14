@@ -5,7 +5,7 @@ import General from './components/general/general';
 import Admin from './components/admin/admin';
 import Campaign from "./pages/campaign/campaign";
 import Services from "./pages/services/services";
-import Contact from './components/Contact/Contact';
+import Contact from './pages/contact/contact';
 import Panel from './components/admin/panel/panel';
 import Home from './components/admin/panel/Home/Home';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
@@ -36,7 +36,7 @@ export class App extends Component {
           <Route path="/contacts" element={<Contact/>}/>
           <Route path="/panel" element={<Panel/>}/>
           <Route path="/panel/home" element={<Home/>}/>
-          <Route path="/panel/mailbox" element={<Mail/>}/> // analytics dashboard settings
+          <Route path="/panel/mailbox" element={<Mail/>}/>
           <Route path="/panel/analytics" element={<Analytics/>}/>
           <Route path="/panel/dashboard" element={<Dashboard/>}/>
           </Routes>

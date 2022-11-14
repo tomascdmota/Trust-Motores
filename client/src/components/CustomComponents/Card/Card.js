@@ -5,7 +5,7 @@ export default function Card ({title, imageUrl, body}) {
     return(
         <div className="card-container">
             <div className="image-container">
-                <img src={imageUrl} alt="Card Image"/>
+                <img src={imageUrl} alt="Card"/>
             </div>
             <div className="card-content">
                  <div className="card-title"><h3>{title}</h3></div>

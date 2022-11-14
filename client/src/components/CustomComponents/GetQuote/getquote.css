@@ -93,7 +93,6 @@
       grid-template-columns: repeat(3,auto);
       align-items: center;
       justify-content: center;
-      background-color: #303956;
     }
     .validate-input {
       padding: 5px;
@@ -150,7 +149,6 @@
       grid-template-columns: repeat(1,auto);
       align-items: center;
       justify-content: center;
-      background-color: #303956;
     }
     .validate-input {
       padding: 5px;

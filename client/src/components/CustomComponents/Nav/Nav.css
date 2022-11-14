@@ -37,6 +37,7 @@ nav {
   }
 
   .nav-menu {
+	display: flex !important;
 	  margin: 0;
   }
   
@@ -127,262 +128,59 @@ nav {
   }
   
  
-   
-  .fa-bars {
-	color: #fff;
-  }
-  
-  .nav-links-mobile {
-	display: none;
-  }
-  
+
   .menu-icon {
-	display: none;
+	display: hidden;
   }
   
-  @media screen and (max-width: 960px) {
-	.NavbarItems {
-	  position: relative;
-	}
-  
+ 
+
+  @media screen and (max-width: 1200px) {
+
+	
 	.nav-menu {
 	  display: flex;
 	  flex-direction: column;
-	  width: 100%;
-	  height: 90vh;
+	  width: 100vw;
+	  height: auto;
 	  position: absolute;
 	  top: 80px;
-	  left: -100%;
 	  transition: all 0.5s ease;
+	  background-color: #292929;
 	}
   
-	.nav-menu.active {
-	  background: #EFA01D;
-	  left: 0;
-	  transition: all 0.5s ease;
-	  z-index: 1;
+	.nav-links .active ul li{
+		visibility: gone;
+		color: blue;
 	}
-  
 	.nav-links {
+	display: block;
 	  text-align: center;
-	  padding: 2rem;
 	  width: 100%;
-	  display: table;
+	  display: flex;
+	  margin-top: 5px;
 	}
-  
-	.nav-links:hover {
-	  background-color: #fff;
-	  color: #EFA01D;
-	  border-radius: 0;
+
+
+	.nav-menu:hover, .nav-links:hover{
+		background-color: #292929;
 	}
   
 	.navbar-logo {
 	  position: absolute;
 	  top: 0;
 	  left: 0;
-	  transform: translate(25%, 50%);
 	}
   
-	.menu-icon {
-	  display: block;
-	  position: absolute;
-	  top: 0;
-	  right: 0;
-	  transform: translate(-100%, 60%);
-	  font-size: 1.8rem;
-	  cursor: pointer;
+	.menu-icon{
+		height: 70px;
+		margin-top: 12px;
+		display: flex;
 	}
-  
-	.fa-times {
-	  color: #fff;
-	  font-size: 2rem;
-	}
-  
-	.nav-links-mobile {
-	  display: block;
-	  text-align: center;
-	  margin: 2rem auto;
-	  border-radius: 4px;
-	  width: 80%;
-	  text-decoration: none;
-	  font-size: 1.5rem;
-	  background-color: transparent;
-	  color: #fff;
-	  padding: 14px 20px;
-	  border: 1px solid #fff;
-	  transition: all 0.3s ease-out;
-	}
-  
-	.nav-links-mobile:hover {
-	  background: #fff;
-	  color: #242424;
-	  transition: 250ms;
+	
+	.qbtn {
+		right: 0;
+		display: none;
 	}
   }
 
-  @media (max-width: 1199.98px) { 
-	.navbar-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 80px;
-		min-width: 60vw;
-	  }
-
-	  .nav-links {
-		font-family: "Barlow";
-		color: #fff;
-		display: flex;
-		align-items: center;
-		text-decoration: none;
-		padding: 0rem 1.2rem;
-		height: 100%;
-	  }
-	  
-	.navbar-logo {
-		font-family: "Edge Of Madness";
-		color: #D52228;
-		letter-spacing: 1px;
-		cursor: default;
-		font-weight: 900;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 1.2em;
-		display: flex;
-		margin-left: 0 ;
-		margin-right: 0px;
-		padding: .5rem .8rem;
-	  }
-
-	  .qbtn {
-		display: inline-block;
-		font:normal normal 300 1.2em 'Barlow';
-		font-weight: 700;
-		text-decoration:none;	
-		color:#fff;
-		background-color: var(--secondary-color);
-		border: 1.5px solid #fff;
-		border-radius: 80px;
-		padding: .3rem .8rem;
-		margin-right: 0;
-		background-size: 200% 100%;	
-	  }
-   }
-
-@media (max-width: 991.98px) { 
-	.navbar-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 80px;
-		min-width: 60vw;
-	  }
-
-	.navbar-logo {
-		font-family: "Edge Of Madness";
-		color: #D52228;
-		letter-spacing: 1px;
-		cursor: default;
-		font-weight: 900;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 1.2em;
-		display: flex;
-		margin-left: 0 ;
-		margin-right: 0px;
-		padding: .5rem .8rem;
-	  }
-
-	  .qbtn {
-		display: inline-block;
-		font:normal normal 300 1.2em 'Barlow';
-		font-weight: 700;
-		text-decoration:none;	
-		color:#fff;
-		background-color: var(--secondary-color);
-		border: 1.5px solid #fff;
-		border-radius: 80px;
-		padding: .3rem .8rem;
-		margin-right: 0;
-		background-size: 200% 100%;	
-	  }
- }
-
-
-@media(max-width: 767.98px) {
-	.navbar-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 80px;
-		min-width: 60vw;
-	  }
-
-	.navbar-logo {
-		font-family: "Edge Of Madness";
-		color: #D52228;
-		letter-spacing: 1px;
-		cursor: default;
-		font-weight: 900;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 1.2em;
-		display: flex;
-		margin-left: 0 ;
-		margin-right: 0px;
-		padding: .5rem .8rem;
-	  }
-
-	  .qbtn {
-		display: inline-block;
-		font:normal normal 300 1.2em 'Barlow';
-		font-weight: 700;
-		text-decoration:none;	
-		color:#fff;
-		background-color: var(--secondary-color);
-		border: 1.5px solid #fff;
-		border-radius: 80px;
-		padding: .3rem .8rem;
-		margin-right: 0;
-		background-size: 200% 100%;	
-	  }
-}  
-
-@media (max-width: 575.98px){
-	.navbar-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 80px;
-		min-width: 60vw;
-	  }
-
-	.navbar-logo {
-		font-family: "Edge Of Madness";
-		color: #D52228;
-		letter-spacing: 1px;
-		cursor: default;
-		font-weight: 900;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 1.2em;
-		display: flex;
-		margin-left: 0 ;
-		margin-right: 0px;
-		padding: .5rem .8rem;
-	  }
-
-	  .qbtn {
-		display: inline-block;
-		font:normal normal 300 1.2em 'Barlow';
-		font-weight: 700;
-		text-decoration:none;	
-		color:#fff;
-		background-color: var(--secondary-color);
-		border: 1.5px solid #fff;
-		border-radius: 80px;
-		padding: .3rem .8rem;
-		margin-right: 0;
-		background-size: 200% 100%;	
-	  }
-}

@@ -3,10 +3,13 @@ import jsonData from '../../../data/data.json'
 import Modal from '../Modal/Modal.js';
 import {Link} from "react-router-dom"
 import './Nav.css'
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Navigationpages() {
 
   const [showModal, setShowModal] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
   const closeModal = () => {
       setShowModal(false);
@@ -17,16 +20,25 @@ function Navigationpages() {
     console.log(showModal);
   }
 
+  const toggleClass = (e) => {
+    e.preventDefault();
+    setIsActive(!isActive);
+  }
+
     return (
         <div>
         <nav className="nav" data-testid="navigation">
+       
               <h1 className="navbar-logo" data-testid="navbar-logo">
                   <b>Trust Motores</b>
               </h1>
+              
             <div className="navbar-container" data-testid="navbar-container">
+              
+           {isActive === false? <>
           <ul className={'nav-menu'}>
             
-          <Link to="/" className='nav-links'>
+          <Link to="/" className='nav-links' >
               <li className='nav-item'>
                 <div
                   className='nav-links'>
@@ -65,6 +77,7 @@ function Navigationpages() {
          
 
           </ul>
+          </>: <div className='nav-menu' style={{display:"none"}}></div>}
           
           </div>
         
@@ -77,8 +90,13 @@ function Navigationpages() {
               data-testid="qbtn">
                 {jsonData.Navigation.getquote}
               </button>
+              {vw <= 1100 ? <span><MenuIcon className='menu-icon' onClick={toggleClass}/></span>: <></> }
+              
+              
+              
               
       </nav>
+      
       {showModal ? <Modal show={showModal} handleClose={closeModal} /> : null}
         </div>
     )

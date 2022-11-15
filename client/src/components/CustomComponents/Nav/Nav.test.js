@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import {render, screen, fireEvent, getByTestId} from "@testing-library/react";
 import Nav from "./Nav";
 

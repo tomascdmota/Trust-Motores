@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import {getCampaigns} from "./contentful"; // Calling the contentfuls function
+import {getCampaigns} from "./contentful.js"; // Calling the contentfuls function
 // that retrieves all of the our data.
 
 const promise = getCampaigns(); 

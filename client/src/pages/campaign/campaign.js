@@ -8,7 +8,7 @@ import {useData} from "../../utils/usePosts.js";
 export default function campaign() {
 
   const [showModal, setShowModal] = useState(false);
-  const [posts, isLoading] = useData(); 
+  const [posts, isLoading] = useData();
 
   const closeModal = () => {
       setShowModal(false);

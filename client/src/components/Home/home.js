@@ -34,7 +34,7 @@ const Home = () => {
                         <button className='home-get-in-touch-button' onClick={modal}>Saber mais</button>
                         </div>
                     </div>
-                    <div className='right '><img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1667854926/My_project_1_nudtri.png" alt="home"/></div>
+                    <div className='home-right '><img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1667854926/My_project_1_nudtri.png" alt="home"/></div>
                    <GetQuote/>
 			
             {showModal ? <Modal show={showModal} handleClose={closeModal}/> :null}

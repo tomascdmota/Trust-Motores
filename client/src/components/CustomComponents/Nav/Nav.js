@@ -4,12 +4,15 @@ import Modal from '../Modal/Modal.js';
 import {Link} from "react-router-dom"
 import './Nav.css'
 import MenuIcon from '@mui/icons-material/Menu';
+import Sidebar  from "../../../components/admin/panel/sidebar/sidebar";
 
 function Navigationpages() {
 
   const [showModal, setShowModal] = useState(false);
   const [isActive, setIsActive] = useState(false);
+
   const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+
 
   const closeModal = () => {
       setShowModal(false);
@@ -21,9 +24,10 @@ function Navigationpages() {
   }
 
   const toggleClass = (e) => {
-    e.preventDefault();
     setIsActive(!isActive);
+    console.log(isActive);
   }
+
 
     return (
         <div>
@@ -32,12 +36,11 @@ function Navigationpages() {
               <h1 className="navbar-logo" data-testid="navbar-logo">
                   <b>Trust Motores</b>
               </h1>
-              
             <div className="navbar-container" data-testid="navbar-container">
-              
-           {isActive === false? <>
-          <ul className={'nav-menu'}>
-            
+         
+           
+           
+          <ul className={isActive  ? "nav-menu show-nav" : "nav-menu"}>
           <Link to="/" className='nav-links' >
               <li className='nav-item'>
                 <div
@@ -74,14 +77,13 @@ function Navigationpages() {
                 </li>
               </Link>
 
-         
-
+             
           </ul>
-          </>: <div className='nav-menu' style={{display:"none"}}></div>}
           
           </div>
-        
           
+          <span className='menu-icon'> <MenuIcon className='menu-icon' onClick={toggleClass}/></span>
+         
           <button href="#getqt"
               id="mybtn"
               type="button"
@@ -90,13 +92,10 @@ function Navigationpages() {
               data-testid="qbtn">
                 {jsonData.Navigation.getquote}
               </button>
-              {vw <= 1100 ? <span><MenuIcon className='menu-icon' onClick={toggleClass}/></span>: <></> }
               
-              
-              
+            
               
       </nav>
-      
       {showModal ? <Modal show={showModal} handleClose={closeModal} /> : null}
         </div>
     )

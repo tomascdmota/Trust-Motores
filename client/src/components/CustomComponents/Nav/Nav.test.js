@@ -6,7 +6,7 @@ import Nav from "./Nav";
 
 it("Renders the nav", ()=> {
     const div = document.createElement('div');
-    ReactDOM.render(<Nav/>, div);
+    render(<Nav/>, div);
     const {modalBtn} = screen.getByTestId("qbtn");
     fireEvent.click(modalBtn);
     const {getByText} = render(<Nav/>);

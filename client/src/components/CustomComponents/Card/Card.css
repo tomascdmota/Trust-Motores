@@ -1,6 +1,6 @@
 .card-container {
-    width: 350px;
-    height: 500px;
+    width: 400px;
+    height: 550px;
     overflow: hidden;
     box-shadow: 0px 0px 8px 0px rgba(213,34,40,0.77);
     transition: 0.3s;
@@ -14,10 +14,11 @@
     box-shadow: 0px 0px 15px -5px  rgba(213,34,40,0.77);
     -webkit-box-shadow:  0px 0px 15px -5px rgba(213,34,40,0.77);
     -moz-box-shadow:  0px 0px 15px -5px rgba(213,34,40,0.77);
+    cursor: pointer;
 }
 .image-container img{ 
     overflow: hidden;
-    height: 350px;
+    height: 400px;
     align-self: center;
 }
 
@@ -48,3 +49,35 @@ h3,p{
     }
 }
 
+
+
+@media screen and (max-width: 1400px) {
+    .card-container {
+        width: 400px;
+        height: 520px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .card-container{
+        width: 600px;
+        height: 600;
+    }
+    .image-container img{ 
+        overflow: hidden;
+        height: 400px;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .card-container{
+        width: 300px;
+        height: 480px;
+    }
+    .image-container img{ 
+        overflow: hidden;
+        height: 300px;
+        align-self: center;
+    }
+}

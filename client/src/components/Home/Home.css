@@ -15,16 +15,16 @@
 }
 
 .split {
-    height: 100%;
-    width: 50%;
+    height: 100vh;
+    width: 100vw;
     position: relative;
     flex-direction: row;
     z-index: 0;
-    padding-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .home-left {
-    width: 50vw;
+    flex: 50%;
     height: 100%;
     margin-left: 10vw;
     padding-top: 10vh;
@@ -35,8 +35,8 @@ img {
 }
 
 
-.right{
-    width: 60vw;
+.home-right{
+    flex: 50%;
     right: 0;
     max-width: 100%;
     display: flex;
@@ -52,7 +52,6 @@ img {
 
 .home-centered {
     position: absolute;
-    text-align: flex-start;
 }
 
 .home-campaign-title{
@@ -90,3 +89,25 @@ img {
     font: normal 300 1.3em 'Barlow';
 }
 
+
+@media screen and (max-width: 1600px) {
+    .home-right  {
+        flex:30%;
+    }
+}
+
+
+@media(max-width: 900px) {
+    .home-campaign{
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    .home-right, .home-left {
+        flex: 100%;
+    }
+  
+}

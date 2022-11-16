@@ -26,7 +26,7 @@ export default function GetQuote() {
 
 
 				<div className="validate-input" data-validate = "Matricula is required">
-					<input  className="input-box" type="text" name="matricula" value={matricula} placeholder="Matrícula" onChange={(e) => setMatricula(e.target.value)} />
+					<input  className="input-box" type="text" id="matricula" name="matricula" value={matricula} placeholder="Matrícula" onChange={(e) => setMatricula(e.target.value)} />
 				</div>
 
 				<div className="validate-input" data-validate = "Valid email is required: ex@abc.xyz">

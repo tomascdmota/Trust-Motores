@@ -30,7 +30,7 @@ export default function campaign() {
         {posts.map(post => (
         <Carousel title={post.fields.weeklyCampaign}
         description={post.fields.description}
-        image={post.fields.campaignImage}/>
+        image={post.fields.image.fields.file.url}/>
       ))}
       </Slider>
       <GetQuote/>

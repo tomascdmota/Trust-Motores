@@ -1,0 +1,40 @@
+.carousel-container{
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    background-color: #292929;
+    padding-top: 10vh;
+}
+
+.carousel-split {
+    display: flex;
+    flex: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carousel-left{
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+}
+
+.carousel-right {
+    flex:40%;
+}
+
+.carousel-title {
+    color: rgba(213,34,40,1);
+    font-size: 3rem;
+    padding-bottom: 10vh;
+    word-break: keep-all;
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousel-description {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}

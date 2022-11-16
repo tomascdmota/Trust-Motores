@@ -90,6 +90,14 @@ img {
     font: normal 300 1.3em 'Barlow';
 }
 
+
+@media screen and (max-width: 1600px) {
+    .home-right  {
+        flex:30%;
+    }
+}
+
+
 @media(max-width: 900px) {
     .home-campaign{
         height: 90vh;

@@ -72,6 +72,8 @@
 	display: flex;
 	margin-right: auto;
 	margin-left: 1rem;
+	-webkit-text-stroke-width: 0.05px;
+    -webkit-text-stroke-color: white;
   }
   
   .fa-tree {
@@ -148,6 +150,7 @@
 
 	.navbar-logo{
 		margin-left: 4rem;
+		font-size: 2rem;
 	}
 	.nav-menu {
 		height: 80px;
@@ -164,6 +167,7 @@
 		text-decoration: none;
 		padding: 0rem 1.2rem;
 		height: 100%;
+		font-size: 1.3rem;
 	  }
 	.qbtn {
 		display: inline-block;

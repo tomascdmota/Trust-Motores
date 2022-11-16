@@ -33,10 +33,8 @@ export default function campaign() {
         image={post.fields.campaignImage}/>
       ))}
       </Slider>
-      <div className='getquote-carousel'>
-        <GetQuote/>
-      </div>
-      
+      <GetQuote/>
+    
     </div>
     <Footer/>
     

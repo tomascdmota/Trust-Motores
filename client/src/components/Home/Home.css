@@ -89,12 +89,23 @@ img {
     font: normal 300 1.3em 'Barlow';
 }
 
+.mobilequote-div {
+
+}
+
 
 @media screen and (max-width: 1600px) {
     .home-right  {
         flex:30%;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .getquote-div {
+        display: none;
+    }
+}
+
 
 
 @media(max-width: 900px) {
@@ -111,3 +122,4 @@ img {
     }
   
 }
+

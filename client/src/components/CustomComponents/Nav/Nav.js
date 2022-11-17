@@ -20,12 +20,10 @@ function Navigationpages() {
 
   const modal = () => {
     setShowModal(!showModal);
-    console.log(showModal);
   }
 
   const toggleClass = (e) => {
     setIsActive(!isActive);
-    console.log(isActive);
   }
 
 

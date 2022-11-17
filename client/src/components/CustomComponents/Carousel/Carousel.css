@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100vw;
     padding-top: 10vh;
-    background-image: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1668637235/iu_grroqm_1_bxvm3e.jpg");
+    background-image: url("https://media.istockphoto.com/photos/product-showcase-background-warehouse-blurred-3d-rendering-picture-id876420708?k=6&m=876420708&s=170667a&w=0&h=yhyB2u8EzqkchmbBdkncZnH0SC2qTg2ja9SSJqpmGXk=");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -13,12 +13,14 @@
     flex: 100%;
     flex-direction: row;
     justify-content: center;
+    padding-top: 10vh;
 }
 
 .carousel-left{
     flex: 60%;
     display: flex;
     flex-direction: column;
+    
     align-items: center;
     padding-left: 10%;
     padding-top: 5%;
@@ -52,4 +54,70 @@
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
+}
+
+.carousel-left .qbtn {
+    display: none;
+}
+
+@media screen and (max-width: 1700px){
+    .carousel-right img{
+        height: 60%;
+    }
+    .carousel-left{
+        flex: 70%;
+    }
+    .carousel-title{
+        font-size: 4rem;
+    }
+    .carousel-left .qbtn {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .carousel-split{
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-left{
+        flex: 70%;
+        margin-right:10%;
+    }
+    .carousel-title{
+        font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+  
+    .carousel-right{
+        flex: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel-right img{
+        height: 400px;
+    }
+    .carousel-left .qbtn {
+    display: inline-block;
+    font: normal normal 300 1.1em 'Barlow';
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--secondary-color);
+    border: 1.5px solid #fff;
+    border-radius: 10px;
+    padding-top: 10vh;
+    padding: 0.6rem 1rem;
+    margin-right: 5%;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, transparent 50%, var(--main-color) 50%);
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .carousel-left .contact1-form-btn {
+        margin-top: 10px;
+    }
 }

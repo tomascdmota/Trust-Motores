@@ -18,6 +18,8 @@ const Home = () => {
     const [showModal, setShowModal] = useState(false);
     const [posts]= useData();
 
+    const [showQuote, setShowQuote] = useState(false);
+
     
     const closeModal = () => {
         setShowModal(false);
@@ -25,6 +27,10 @@ const Home = () => {
 
     const modal = () => {
         setShowModal(true);
+    }
+
+    const showQuoteFunction = () => {
+        setShowQuote(!showQuote)
     }
 
     return(
@@ -35,11 +41,18 @@ const Home = () => {
                 {posts.map(post => (
                 <Carousel title={post.fields.weeklyCampaign}
                 description={post.fields.description}
-                image={post.fields.image.fields.file.url}/>
+                image={post.fields.image.fields.file.url}
+                modal={showQuoteFunction}/>
             ))}
             </Slider>
-            <GetQuote/>
+            <div className='getquote-div'>
+                <GetQuote cancelar={closeModal}/>
             </div>
+            
+            
+            </div>
+
+            {showQuote ? <div className='mobilequote-div'><GetQuote handleClose={showQuoteFunction}/> </div>: null}
         
 			
             {showModal ? <Modal show={showModal} handleClose={closeModal}/> :null}

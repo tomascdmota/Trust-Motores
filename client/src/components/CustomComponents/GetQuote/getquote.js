@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './getquote.css';
 import Dropdown from '../DropDown/Dropdown';
 
-export default function GetQuote() {
+export const GetQuote = ({handleClose})=> {
 	
 	const [email, setEmail] = useState("");
 	const [subject, setSubject] = useState("");
@@ -42,14 +42,22 @@ export default function GetQuote() {
 				
 
 				<div className="container-contact1-form-btn">
-					<button data-testid="contact-button" type="submit" id="submit" className="contact1-form-btn" >
+					<button data-testid="contact-button" type="submit" id="submit" className="send" >
 						<span>
 							Enviar
 						</span>
+						
 					</button>
+					
 				</div>
+					<button data-testid="contact-button" onClick={handleClose} type="submit" id="submit" className="cancel" >
+							Cancelar
+						
+					</button>
+					
 			</div>
 		</div>
     )
 }
 
+export default GetQuote;

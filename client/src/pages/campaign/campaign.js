@@ -15,8 +15,13 @@ import "slick-carousel/slick/slick-theme.css";
 export default function campaign() {
 
   const [showModal, setShowModal] = useState(false);
+  const [showQuote, setShowQuote] = useState(false);
   const [posts]= useData();
 
+  const showQuoteFunction = () => {
+    setShowQuote(!showQuote)
+    console.log(showQuote);
+}
   const closeModal = () => {
       setShowModal(false);
   };
@@ -30,10 +35,13 @@ export default function campaign() {
         {posts.map(post => (
         <Carousel title={post.fields.weeklyCampaign}
         description={post.fields.description}
-        image={post.fields.image.fields.file.url}/>
+        image={post.fields.image.fields.file.url}
+        modal={showQuoteFunction}/>
       ))}
       </Slider>
-      <GetQuote/>
+
+      {showQuote ? <GetQuote handleClose={showQuoteFunction}/> : null}
+     
     
     </div>
     <Footer/>

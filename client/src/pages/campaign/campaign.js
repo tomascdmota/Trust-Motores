@@ -1,39 +1,53 @@
-import React from 'react';
-import Navigation from "../../components/navigation-pages/Navigationpages"
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState} from 'react';
 import './campaign.css';
+import Modal from "../../components/CustomComponents/Modal/Modal.js";
+import Navigation from"../../components/CustomComponents/Nav/Nav.js";
+import Footer from "../../components/Footer/footer.js"
+import GetQuote from '../../components/CustomComponents/GetQuote/getquote.js';
 
-export default function campaign() {
-  return (
-    <div className='body-div'>
+import {useData} from "../../utils/usePosts.js";
+import { Carousel } from '../../components/CustomComponents/Carousel/Carousel.js';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+export default function Campaign()  {
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [showModal, setShowModal] = useState(false);
+  const [showQuote, setShowQuote] = useState(false);
+  const [posts]= useData();
+
+  const showQuoteFunction = () => {
+    setShowQuote(!showQuote)
+    console.log(showQuote);
+}
+  const closeModal = () => {
+      setShowModal(false);
+  };
+
+  return( 
+  <div className='campaign-body'>
     <Navigation/>
-    <div className="campaign-body">
+    
+    <div className='body-div'>
+      <Slider>
+        {posts.map(post => (
+        <Carousel title={post.fields.weeklyCampaign}
+        description={post.fields.description}
+        image={post.fields.image.fields.file.url}
+        modal={showQuoteFunction}/>
+      ))}
+      </Slider>
+
+      {showQuote ? <GetQuote handleClose={showQuoteFunction}/> : null}
      
-
-      <div className="split left">
-        <div className='centered'>
-         <img src='../../assets/small-pistons-2-3-min.gif' width="100%"/>
-        </div>
-      </div>
-
-      <div className="split right">
-        <div className='centered'>
-          <h1 className="offer"><b>O que oferecemos:</b></h1>
-          <ul className='list'>
-            <li>&bull; 12 meses de garantia sem limites de kms</li>
-            <li>&bull; Possibilidade de crédito</li>
-            <li>&bull; Reconstrução do seu motor</li>
-            <li>&bull; Portes de envio em vendas superiores a 2000€</li>
-          </ul>
-        </div>
-      </div>
-      
+    
     </div>
-
+    <Footer/>
     
-
-    
-    
-    
+    {showModal ? <Modal show={showModal} handleClose={closeModal}/> :null}
     </div>
   )
 }

@@ -1,0 +1,179 @@
+  .get-quote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 90vw;
+    max-width: 91vw;
+    position: absolute;
+    padding-left: 10%;
+    bottom: 1vh;
+    z-index: 999;
+    border-radius: 50px;
+    opacity: 0.95 !important;
+    
+  }
+
+  .quote-title h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      margin: 0;
+      font-size: 2em; 
+      padding-top: 20px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      background-color: #1D1D1D;  
+      opacity: 0.95;
+  }
+
+  .form-inline {
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 15vh;
+    max-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #1D1D1D;
+    opacity: 0.95;
+  }
+  
+  .form-inline input {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin: 5px 50px 5px 0px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .form-inline button {
+    padding: 10px 40px;
+    background-color: #c30000;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font: normal 300 1.4em 'Barlow';
+  }
+ 
+  .form-inline select{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin: 5px 10px 5px 0px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+
+  .validate-input{
+    padding-right: 10px;
+  }
+
+  .cancel{
+    display: none;
+    visibility: gone;
+  }
+  
+  @media screen and (max-width: 1200px) {
+
+   
+
+    .form-inline {
+      min-height: 15vh;
+      max-height: 50vh;
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3,auto);
+      align-items: center;
+      justify-content: center;
+    }
+    .validate-input {
+      padding: 5px;
+    }
+    
+    
+    .form-inline input {
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      margin: 5px 5px 5px 0px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+    
+    .form-inline button {
+      padding: 10px 90px;
+      background-color: #c30000;
+      border: 1px solid #ddd;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+   
+    .form-inline select{
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      margin: 5px 10px 5px 5px;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+  
+    input.input-box {
+      height: 50px;
+      border-radius: 10px;
+      padding: 0 50px;
+    }
+   
+  }
+  
+
+  
+  @media screen and (max-width: 765px) {
+   
+
+    .form-inline {
+      min-height: 80vh;
+      max-height: 60vh;
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(1,auto);
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+
+    .get-quote {
+      min-width: 99vw;
+    }
+    .validate-input {
+      padding: 5px;
+    }
+    .form-inline span {
+      padding: 10px 70px;
+      background-color: #c30000;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .cancel {
+      background-color: #c30000;
+      display: block;
+    }
+   
+  }

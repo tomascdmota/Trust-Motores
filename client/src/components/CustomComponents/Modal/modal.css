@@ -1,0 +1,292 @@
+  
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+  }
+  .background {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex: 1  800px;
+    width: 900px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .screen {
+    position: relative;
+    background: #3e3e3e;
+    border-radius: 15px;
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+  }
+  
+  .screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background:  rgba(0, 0, 0, .4);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .screen-header-left {
+    margin-right: auto;
+    flex-direction: row-reverse;
+  }
+  
+  .screen-header-button {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+  }
+  
+  .screen-header-button.close {
+    background: #ed1c6f;
+    padding: 0 !important;
+    margin-top: 6px !important;
+  }
+  
+  .screen-header-button.maximize {
+    background: #74c54f;
+  }
+  
+  .screen-header-button.minimize {
+    background: #e8e925;
+  }
+  
+  .screen-header-right {
+    display: flex;
+    color: white;
+  }
+
+  .screen-header-right img {
+    color: #fff;
+    border-color: white;
+    height: 20px;
+    width: 15px;
+  }
+  
+  
+  .screen-body {
+    display: flex;
+    background-image: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1668443175/iu_nkd2pb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .screen-body-item {
+    width: 30vw;
+    flex: 1;
+    padding: 60px;
+  }
+  
+  .screen-body-item.left {
+    display: flex;
+    width: 50%;
+    height: auto;
+    left: 0;
+    background: transparent;
+    flex-direction: column;
+  }
+  
+  .app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: red;
+    font-size: 26px;
+  }
+  
+  .app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 30px;
+    height: 4px;
+    background: #ea1d6f;
+  }
+  
+  .app-contact {
+    padding: 5px;
+    margin-top: auto;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .app-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .app-form-group.message {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 0px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(256,256,256);
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #fff;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: rgb(0, 0, 0);
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    color: #ea1d6f;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  
+  .app-form-button:hover {
+    color: #b9134f;
+  }
+  
+ 
+   
+  
+  @media screen and (max-width: 725px) {
+    .container {
+      flex: 0 1 600px;
+      width: 1000px;
+      margin: auto;
+      padding: 10px;
+    }
+    .screen-body-item {
+      flex: 1;
+      padding: 50px;
+      background-color: #fff;
+      border-radius: 0px 0px 15px 15px;
+    }
+    
+    
+
+    
+    .screen {
+      position: relative;
+      background: #3e3e3e;
+      border-radius: 15px;
+    }
+    
+    .screen:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+      z-index: -1;
+    }
+
+
+    .screen-body {
+      flex-direction: column;
+    }
+  
+    .screen-body-item.left {
+      margin-bottom: 30px;
+    }
+  
+    .app-title {
+      flex-direction: row;
+    }
+  
+    .app-title span {
+      margin-right: 12px;
+    }
+  
+    .app-title:after {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      flex: 0 1 500px;
+      width: 1000px;
+      margin: auto;
+      padding: 10px;
+    }
+    .screen-body-item .left {
+      flex: 1;
+      background-color: #fff;
+      border-radius: 0px;
+    }
+    
+    
+
+    
+    .screen {
+      position: relative;
+      background: #3e3e3e;
+      border-radius: 15px;
+    }
+    
+    .screen:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+      z-index: -1;
+    }
+  }
+  

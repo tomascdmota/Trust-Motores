@@ -1,0 +1,125 @@
+@font-face{
+	font-family: "Edge Of Madness";
+	src: url('../../fonts/EdgeOfMadness.ttf');
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    padding: 20px;
+    padding-top: 10vh;
+    margin-bottom: -10vh;
+}
+
+.split {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    flex-direction: row;
+    z-index: 0;
+    flex-wrap: wrap;
+}
+
+.home-left {
+    flex: 50%;
+    height: 100%;
+    margin-left: 10vw;
+    padding-top: 10vh;
+}
+
+img {
+    height: 70vh;
+}
+
+
+.home-right{
+    flex: 50%;
+    right: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+    
+.offer {
+    display: flex;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.home-centered {
+    position: absolute;
+}
+
+.home-campaign-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font: normal 900 3em 'Barlow';
+    max-height: 10vh;
+    padding-top: 20vh;
+    margin-bottom: 10vh;
+    display: flex;
+    color: rgba(213,34,40,1);
+}
+
+.home-campaign{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.list p{
+    color: #656364;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.home-get-in-touch-button {
+    background-color: rgba(213,34,40,1);
+    margin-top: 10px;
+    border-radius: 10px;
+    font: normal 300 1.3em 'Barlow';
+}
+
+.mobilequote-div {
+
+}
+
+
+@media screen and (max-width: 1600px) {
+    .home-right  {
+        flex:30%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .getquote-div {
+        display: none;
+    }
+}
+
+
+
+@media(max-width: 900px) {
+    .home-campaign{
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    .home-right, .home-left {
+        flex: 100%;
+    }
+  
+}
+

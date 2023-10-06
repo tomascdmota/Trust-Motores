@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import JSONData from './data/data.json';
 import './css/style.css';
-import General from './components/general/general';
-import Admin from './components/admin/admin';
-import Campaign from "./pages/campaign/campaign";
-import Services from "./pages/services/services";
-import Contact from './components/Contact';
+import General from './components/general/general.js';
+import Campaign from "./pages/campaign/campaign.js";
+import Services from "./pages/services/services.js";
+import Contact from './pages/contact/contact.js';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 export class App extends Component {
@@ -25,7 +24,6 @@ export class App extends Component {
       <Router>
         <Routes>
           <Route path="/" element={<General/>}/>
-          <Route path="/admin" element={<Admin/>}/>
           <Route path="/campaign" element={<Campaign/>}/>
           <Route path="/services" element={<Services/>}/>
           <Route path="/contacts" element={<Contact/>}/>

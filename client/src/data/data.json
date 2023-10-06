@@ -1,9 +1,9 @@
 {
     "Navigation": {
+        "home": "Home",
         "campaign": "Campanhas",
         "services": "serviços",
         "contacts": "contactos",
-        "gifermo": "https://www.gifermo.com",
         "getquote": "Pedir Cotação"
     },
 

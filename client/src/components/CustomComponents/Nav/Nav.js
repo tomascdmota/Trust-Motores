@@ -1,32 +1,51 @@
 import React, {useState} from 'react'
-import jsonData from '../data/data.json'
-import Modal from './CustomComponents/Modal/Modal.js';
+import jsonData from '../../../data/data.json'
+import Modal from '../Modal/Modal.js';
 import {Link} from "react-router-dom"
+import './Nav.css'
+import MenuIcon from '@mui/icons-material/Menu';
 
-function Navigation() {
+function Navigationpages() {
 
   const [showModal, setShowModal] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+
 
   const closeModal = () => {
       setShowModal(false);
   };
 
   const modal = () => {
-    setShowModal(true);
+    setShowModal(!showModal);
   }
+
+  const toggleClass = (e) => {
+    setIsActive(!isActive);
+  }
+
 
     return (
         <div>
-          
-        <nav className="navbar">
-              <h1 className="navbar-logo">
+        <nav className="nav" data-testid="navigation">
+       
+              <h1 className="navbar-logo" data-testid="navbar-logo">
                   <b>Trust Motores</b>
               </h1>
+            <div className="navbar-container" data-testid="navbar-container">
+         
+           
+           
+          <ul className={isActive  ? "nav-menu show-nav" : "nav-menu"}>
+          <Link to="/" className='nav-links' >
+              <li className='nav-item'>
+                <div
+                  className='nav-links'>
+                  {jsonData.Navigation.home}
+                </div>
+              </li>
+            </Link>
 
-            <div className="navbar-container">
-              
-          <ul className={'nav-menu'}>
-            
             <Link to="/campaign" className='nav-links'>
               <li className='nav-item'>
                 <div
@@ -54,31 +73,29 @@ function Navigation() {
                 </li>
               </Link>
 
-            <li className='nav-item'>
-              <a
-                href= {jsonData.Navigation.gifermo}
-                className='nav-links'>
-               Gifermo
-              </a>
-            </li>
-
+             
           </ul>
           
           </div>
-          {showModal ? <Modal show={showModal} handleClose={closeModal} /> : null}
           
+          <span className='menu-icon'> <MenuIcon className='menu-icon' onClick={toggleClass}/></span>
+         
           <button href="#getqt"
               id="mybtn"
               type="button"
               onClick={modal}
-              className="qbtn">
+              className="qbtn"
+              data-testid="qbtn">
                 {jsonData.Navigation.getquote}
               </button>
+              
+            
+              
       </nav>
-      
+      {showModal ? <Modal show={showModal} handleClose={closeModal} /> : null}
         </div>
     )
 }
 
 
-export default Navigation;
+export default Navigationpages;

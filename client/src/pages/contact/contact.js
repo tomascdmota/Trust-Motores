@@ -1,8 +1,14 @@
 import React from 'react'
+import Navigation from "../../components/CustomComponents/Nav/Nav.js"; 
+import Contact from "../../components/Contact/Contact.js"
 
 function contact() {
   return (
-    <div>contact</div>
+    <div>
+      <Navigation/>
+      <Contact/>
+    </div>
+   
   )
 }
 

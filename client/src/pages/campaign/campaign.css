@@ -1,65 +1,8 @@
-
-.split {
-    height: 100vh;
-    width: 50%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    overflow-x: hidden;
-    
-}
-
-video{
-    z-index: 1;
-}
-
-.left {
-    left: 0;
-    z-index: -1;
-}
-
-.right{
-    right: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
-}
-
-.offer {
-    display: flex;
-    color: #303956;
-    padding-bottom: 20px;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align:start;
-}
-
-.campaign-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #303956;
-    max-height: 10vh;
-    padding-top: 20vh;
-}
-
-.campaign-body{
-    display: flex;
-    flex-direction: column;
-    background: url("https://cdn.dribbble.com/users/8253/screenshots/1902003/media/cea3f6887ffe5cec3806334d7f9ef022.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.list li{
-    color: #303956;
-    font-size: 1.5rem;
-    text-decoration: dashed;
+.body-div {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+    position:relative;
+    width: 100%;
+    background-color: #fff;
 }

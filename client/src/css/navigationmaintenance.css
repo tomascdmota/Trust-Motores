@@ -68,7 +68,7 @@
   
   .nav-links {
 	font-family: "Barlow";
-	color: #303956;
+	color: blue;
 	display: flex;
 	align-items: center;
 	text-decoration: none;
@@ -135,7 +135,6 @@
 	  position: absolute;
 	  top: 80px;
 	  left: -100%;
-	  opacity: 1;
 	  transition: all 0.5s ease;
 	}
   

@@ -104,7 +104,11 @@ iframe {
   color: rgba(213,34,40,1);
   cursor: default;
   text-transform: uppercase;
+<<<<<<< HEAD
   margin-top: 5%;
+=======
+  margin-top: 30px;
+>>>>>>> origin/master
   margin-bottom: 20px;
   
 }

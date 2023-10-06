@@ -1,0 +1,93 @@
+:root {
+    --main-color: #303956;
+    --secondary-color: #c30000;
+}
+
+.panel-home {
+    min-height: 100%;
+}
+.panel-home .row {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.panel-home .row .home-component{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    min-width: 50vw;
+    min-height: 90vh;
+    margin: 0;
+}
+
+.title {
+    color: var(--secondary-color);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+legend {
+    font-size: 2.5rem;
+}
+label {
+    color: var(--main-color);
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 18px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-width: 5px;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    border-color: var(--secondary-color);
+    border-image: initial;
+    border-radius: 5px;
+}
+
+button{
+    cursor: default;
+    background: #25245E;
+    padding: 12px 35px;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}

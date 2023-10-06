@@ -45,7 +45,7 @@ export const GetQuote = ({handleClose})=> {
 			return;
 		  }
 
-			axios.post("http://localhost:3001/send-quote", {
+			axios.post("https://trustmotores.com/send-quote", {
 			matricula, email, contacto, partVal: selectedPart, state: selectedState
 		})
 		.then((response) => {

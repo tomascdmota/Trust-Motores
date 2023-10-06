@@ -39,8 +39,8 @@ button {
 }
 
 .content-tabs {
-    max-width: 100vw;
-    padding: 50px;
+    max-width: 99vw;
+    padding: 30px;
     flex-grow: 1;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;

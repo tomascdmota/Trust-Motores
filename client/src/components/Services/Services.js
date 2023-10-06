@@ -1,13 +1,14 @@
-import React, {lazy} from 'react';
+import React from 'react';
 import './Services.css'
-const Card = lazy(() => import("../CustomComponents/Card/Card"));
-const Navigation = lazy(() => import("../CustomComponents/Nav/Nav"));
+import Card from "../CustomComponents/Card/Card.js";
+import Navigation from "../CustomComponents/Nav/Nav.js";
 
 function Services() {
    
 
          
-        return(<div>
+        return(
+        <div>
             <Navigation/>
             <div className="container-tabs">
                 <div className="feature-title">

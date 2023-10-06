@@ -1,12 +1,12 @@
 import React from 'react'
-import Navigation from "../../components/CustomComponents/Nav/Nav"; 
-
+import Navigation from "../../components/CustomComponents/Nav/Nav.js"; 
+import Contact from "../../components/Contact/Contact.js"
 
 function contact() {
   return (
     <div>
       <Navigation/>
-      <div>contact</div>
+      <Contact/>
     </div>
    
   )

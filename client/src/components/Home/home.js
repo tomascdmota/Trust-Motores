@@ -1,15 +1,15 @@
 import React,{useState, lazy}  from 'react';
 import "./Home.css"
 
-import { useData } from '../../utils/usePosts';
-import { Carousel } from '../CustomComponents/Carousel/Carousel';
+import { useData } from '../../utils/usePosts.js';
+import { Carousel } from '../CustomComponents/Carousel/Carousel.js';
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Modal = lazy(() => import("../CustomComponents/Modal/Modal"))
-const GetQuote = lazy(() => import("../CustomComponents/GetQuote/getquote"));
+const Modal = lazy(() => import("../CustomComponents/Modal/Modal.js"))
+const GetQuote = lazy(() => import("../CustomComponents/GetQuote/getquote.js"));
 
 
 
@@ -24,10 +24,6 @@ const Home = () => {
     const closeModal = () => {
         setShowModal(false);
     };
-
-    const modal = () => {
-        setShowModal(true);
-    }
 
     const showQuoteFunction = () => {
         setShowQuote(!showQuote)

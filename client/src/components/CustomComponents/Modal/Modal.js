@@ -1,40 +1,64 @@
 import React, { useState } from 'react';
 import './modal.css';
+import axios from 'axios';
 
 const Modal = ({handleClose}) => {
 
     const [status, setStatus] = useState("enviar");
+    const [name, setName] = useState('');
+	const [email, setEmail] = useState("");
+	const [sub, setSub] = useState('');
+	const [message, setMessage] = useState('');
 
-    const handleSubmit = async(e) => {
-        e.preventDefault();
-        setStatus("Sending...");
-        console.log(status);
+	const handleSubmit = async(e) => {
+		e.preventDefault(); // Prevents the page from refreshing on form submition
 
-        const {name, email, tel, message} = e.target.elements;
+		// Check if e.target and e.target.elements are defined
+		if (!e.target || !e.target.elements) {
+			console.error('Form or elements not found');
+			return;
+		  }
+		
+		  // Attempt to access form elements, providing default values for safety
+		  const formName = e.target.elements.name ? e.target.elements.name.value : '';
+		  const email = e.target.elements.email ? e.target.elements.email.value : '';
+		  const subject = e.target.elements.subject ? e.target.elements.subject.value : '';
+		  const message = e.target.elements.message ? e.target.elements.message.value : '';
+		
+		  // Log the values to help with debugging
+		  console.log('Form values:', formName, email, subject, message);
 
-        // Info on the email
-        let details = {
-            name: name.value,
-            email: email.value,
-            tel: tel.value,
-            message: message.value
-        }
+		  // From validation
 
-        //Response to be sent to the backend
-
-        let response = await fetch("http://localhost:3002/modal",{
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(details),
-    });
-
-    setStatus("A enviar");
-    let result = await response.json();
-    alert(result.status)
-    }
-
+          if(formName.trim() === ""|| email.trim() === "" || subject.trim() === "" || message.trim() === ""){
+            alert("Preencha todos os campos!");
+            return;
+            
+          } else {
+            axios
+			.post("http://localhost:3001/send-email", {
+			  name: formName,
+			  email,
+			  subject,
+			  message,
+			})
+			.then((response) => {
+			  console.log('Response data:', response.data);
+			  setStatus(response.data.message);
+			  alert("Mensagem enviada! \n A Nossa equipa entrará em contacto assim que possível.")
+			  setName("");
+			  setEmail("")
+			  setSub("")
+			  setMessage("");
+              handleClose();
+			})
+			.catch((error) => {
+			  console.error('Axios error:', error);
+			});
+          }
+		
+		  
+	};
 
 
     // Children is a reference to props.children that represents the opening and closing of the modal

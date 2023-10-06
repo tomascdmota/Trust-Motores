@@ -1,13 +1,20 @@
 import React from 'react'
-import Navigation from"../../components/CustomComponents/Nav/Nav";
+import Navigation from"../../components/CustomComponents/Nav/Nav.js";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import "./services.css"
+import Maintenance from "../../components/maintenance.js"
+
 
 function services() {
-    return (<div>
+    return (
+    
+        <div className='services-container'>
               <Navigation/>
-              <div>services</div>
+              <Maintenance/>
            </div>
     
-  )
+          )
 }
 
 export default services

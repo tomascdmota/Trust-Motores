@@ -4,14 +4,12 @@ import Modal from '../Modal/Modal.js';
 import {Link} from "react-router-dom"
 import './Nav.css'
 import MenuIcon from '@mui/icons-material/Menu';
-import Sidebar  from "../../../components/admin/panel/sidebar/sidebar";
 
 function Navigationpages() {
 
   const [showModal, setShowModal] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
-  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
 
   const closeModal = () => {

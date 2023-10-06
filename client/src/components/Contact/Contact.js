@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './Contact.css';
+import Footer from "../Footer/footer.js"
 import axios from 'axios';
 
 
@@ -12,21 +13,53 @@ const Contact = () => {
 	const [message, setMessage] = useState('');
 
 	const handleSubmit = async(e) => {
-		// Prevents it from submiting the form immediately after clicking the submit button (useful for form validation)
-		const {name, email, subject, message} = e.target.elements;
+		e.preventDefault(); // Prevents the page from refreshing on form submition
 
-		axios.post("http://localhost:3001/send-email", {
-			name: name.value,
-			email: email.value,
-			subject: subject.value,
-			message: message.value
-		}).then((response) => {
-			setStatus(response.data.message);
-			console.log(response);
-			console.log(name, email, sub, message);
-		});
+		// Check if e.target and e.target.elements are defined
+		if (!e.target || !e.target.elements) {
+			console.error('Form or elements not found');
+			return;
+		  }
+		
+		  // Attempt to access form elements, providing default values for safety
+		  const formName = e.target.elements.name ? e.target.elements.name.value : '';
+		  const email = e.target.elements.email ? e.target.elements.email.value : '';
+		  const subject = e.target.elements.subject ? e.target.elements.subject.value : '';
+		  const message = e.target.elements.message ? e.target.elements.message.value : '';
+		
+		  // Log the values to help with debugging
+		  console.log('Form values:', formName, email, subject, message);
+
+		  // From validation
+
+		  if(formName.trim() === "" || email.trim() === "" || subject.trim() === "" || message.trim() === ""){
+			alert("Preencha todos os campos!");
+            return;
+			
+          } else {
+			axios
+			.post("http://localhost:3001/send-email", {
+			  name: formName,
+			  email,
+			  subject,
+			  message,
+			})
+			.then((response) => {
+			  console.log('Response data:', response.data);
+			  setStatus(response.data.message);
+			  alert("Mensagem enviada! \n A Nossa equipa entrará em contacto assim que possível.")
+			  setName("");
+			  setEmail("")
+			  setSub("")
+			  setMessage("");
+			})
+			.catch((error) => {
+			  console.error('Axios error:', error);
+			});
+		  }
+		
+		  
 	};
-
 
 
 
@@ -43,7 +76,7 @@ const Contact = () => {
 				<img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1628076677/IT_Support_Isometric_m2e0zf.svg" alt="IMG"/>
 			</div>
 
-			<form data-testid="form"  className="contact1-form validate-form" >
+			<form data-testid="form" onSubmit={handleSubmit} className="contact1-form validate-form" >
 				<span className="contact1-form-title">
 					Entre em contacto connosco
 				</span>
@@ -53,7 +86,7 @@ const Contact = () => {
 
 					
 					<div className="wrap-input1 validate-input" data-validate = "Name is required">
-						<input onChange={e => setName(e.target.value)} value={name} data-testid="form-name" label="matricula" className="input1" type="text" id="name" name="name" placeholder="Nome" required/>
+						<input onChange={e => setName(e.target.value)} value={name} className="input1" type="text" id="name" name="name" placeholder="Nome" required/>
 						<span className="shadow-input1"></span>
 					</div>
 
@@ -76,7 +109,7 @@ const Contact = () => {
 				<div id='right-side'>
 					<div className="container-contact1-form-btn">
 							<div className={status ? 'msg msgAppear': 'msg'}></div>
-							<button onClick={handleSubmit} data-testid="contact-button" type="submit" id="submit" className="contact1-form-btn" >
+							<button  data-testid="contact-button" type="submit" id="submit" className="contact1-form-btn" >
 								<span>{status}
 									</span>
 							</button>
@@ -93,6 +126,7 @@ const Contact = () => {
 	</div>
             
         </div>
+		<Footer/>
 		</div>
     )
 }

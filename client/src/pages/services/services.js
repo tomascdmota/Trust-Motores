@@ -1,7 +1,5 @@
 import React from 'react'
 import Navigation from"../../components/CustomComponents/Nav/Nav.js";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
 import "./services.css"
 import Maintenance from "../../components/maintenance.js"
 

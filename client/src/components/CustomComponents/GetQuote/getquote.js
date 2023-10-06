@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './getquote.css';
 import Dropdown from '../DropDown/Dropdown.js';
 import axios from 'axios';
+import Dropdown from '../DropDown/Dropdown';
 
 export const GetQuote = ({handleClose})=> {
 	

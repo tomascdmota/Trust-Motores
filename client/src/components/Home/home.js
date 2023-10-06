@@ -1,25 +1,15 @@
 import React,{useState, lazy}  from 'react';
 import "./Home.css"
 
-<<<<<<< HEAD
 import { useData } from '../../utils/usePosts.js';
 import { Carousel } from '../CustomComponents/Carousel/Carousel.js';
-=======
-import { useData } from '../../utils/usePosts';
-import { Carousel } from '../CustomComponents/Carousel/Carousel';
->>>>>>> origin/master
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-<<<<<<< HEAD
 const Modal = lazy(() => import("../CustomComponents/Modal/Modal.js"))
 const GetQuote = lazy(() => import("../CustomComponents/GetQuote/getquote.js"));
-=======
-const Modal = lazy(() => import("../CustomComponents/Modal/Modal"))
-const GetQuote = lazy(() => import("../CustomComponents/GetQuote/getquote"));
->>>>>>> origin/master
 
 
 
@@ -35,13 +25,6 @@ const Home = () => {
         setShowModal(false);
     };
 
-<<<<<<< HEAD
-=======
-    const modal = () => {
-        setShowModal(true);
-    }
-
->>>>>>> origin/master
     const showQuoteFunction = () => {
         setShowQuote(!showQuote)
     }

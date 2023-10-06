@@ -1,25 +1,14 @@
-<<<<<<< HEAD
 import React from 'react';
 import './Services.css'
 import Card from "../CustomComponents/Card/Card.js";
 import Navigation from "../CustomComponents/Nav/Nav.js";
-=======
-import React, {lazy} from 'react';
-import './Services.css'
-const Card = lazy(() => import("../CustomComponents/Card/Card"));
-const Navigation = lazy(() => import("../CustomComponents/Nav/Nav"));
->>>>>>> origin/master
 
 function Services() {
    
 
          
-<<<<<<< HEAD
         return(
         <div>
-=======
-        return(<div>
->>>>>>> origin/master
             <Navigation/>
             <div className="container-tabs">
                 <div className="feature-title">

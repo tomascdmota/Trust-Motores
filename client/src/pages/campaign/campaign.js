@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState} from 'react';
 import './campaign.css';
@@ -9,30 +8,13 @@ import GetQuote from '../../components/CustomComponents/GetQuote/getquote.js';
 
 import {useData} from "../../utils/usePosts.js";
 import { Carousel } from '../../components/CustomComponents/Carousel/Carousel.js';
-=======
-import React, { useState} from 'react';
-import './campaign.css';
-import Modal from "../../components/CustomComponents/Modal/Modal";
-import Navigation from"../../components/CustomComponents/Nav/Nav";
-import Footer from "../../components/Footer/footer"
-import GetQuote from '../../components/CustomComponents/GetQuote/getquote';
-
-import {useData} from "../../utils/usePosts.js";
-import { Carousel } from '../../components/CustomComponents/Carousel/Carousel';
->>>>>>> origin/master
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-<<<<<<< HEAD
 export default function Campaign()  {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-=======
-
-export default function campaign() {
-
->>>>>>> origin/master
   const [showModal, setShowModal] = useState(false);
   const [showQuote, setShowQuote] = useState(false);
   const [posts]= useData();

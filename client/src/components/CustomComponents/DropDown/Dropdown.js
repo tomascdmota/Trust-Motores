@@ -1,7 +1,6 @@
 import React from "react";
 import "./Dropdown.css";
 
-<<<<<<< HEAD
 const Dropdown = ({ options, onValueChange }) => {
     const handleSelectChange = (e) => {
       const selectedValue = e.target.value;
@@ -20,14 +19,3 @@ const Dropdown = ({ options, onValueChange }) => {
   };
   
   export default Dropdown;
-=======
-const Dropdown =({options}) => 
-    <select>
-        {options.map((item, index) => 
-            <option key={index}>{item.value}</option>
-        )}
-    </select>;
-
-
-export default Dropdown;
->>>>>>> origin/master

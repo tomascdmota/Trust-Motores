@@ -3,11 +3,7 @@
     height: 100vh;
     width: 100vw;
     padding-top: 10vh;
-<<<<<<< HEAD
     background-image: url("https://res.cloudinary.com/dnho57ne8/image/upload/v1668689621/product-showcase-background-warehouse-blurred-3d-rendering-picture-id876420708_es5kfu.jpg");
-=======
-    background-image: url("https://media.istockphoto.com/photos/product-showcase-background-warehouse-blurred-3d-rendering-picture-id876420708?k=6&m=876420708&s=170667a&w=0&h=yhyB2u8EzqkchmbBdkncZnH0SC2qTg2ja9SSJqpmGXk=");
->>>>>>> origin/master
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -27,10 +23,6 @@
     
     align-items: center;
     padding-left: 10%;
-<<<<<<< HEAD
-=======
-    padding-top: 5%;
->>>>>>> origin/master
 }
 
 .carousel-right {

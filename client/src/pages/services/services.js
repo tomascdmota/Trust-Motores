@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 import Navigation from"../../components/CustomComponents/Nav/Nav.js";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
@@ -16,17 +15,6 @@ function services() {
            </div>
     
           )
-=======
-import Navigation from"../../components/CustomComponents/Nav/Nav";
-
-function services() {
-    return (<div>
-              <Navigation/>
-              <div>services</div>
-           </div>
-    
-  )
->>>>>>> origin/master
 }
 
 export default services

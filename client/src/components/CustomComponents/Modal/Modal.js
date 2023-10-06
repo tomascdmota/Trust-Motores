@@ -83,7 +83,7 @@ const Modal = ({handleClose}) => {
                                 <div className="app-title">
                                     <span>CONTACTE-NOS</span>
                                 </div>
-                                <div className="app-contact">Contactos: (+351) 219 258 363 / 963 824 837 </div>
+                                <div className="app-contact">Contactos: (+351) 219 258 363 / 963 093 702 </div>
                             </div>
                             <div className="screen-body-item">
                                 <form onSubmit={handleSubmit}>

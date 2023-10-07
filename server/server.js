@@ -22,10 +22,7 @@ app.use(function (req, res, next) {
     // Enabling CORS
     res.header("Access-Control-Allow-Origin", "*"); 
     res.header("Access-Control-Allow-Methods", "*");
-    res.header( 
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
-    );
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
 
@@ -52,7 +49,7 @@ app.get('/', cors(),(req, res) => {
 
 app.post("/send-email", (req, res) => {
     const { name, email, subject, message} = req.body;
-
+    res.set('Access-Control-Allow-Origin', '*');
     const mailOptions = {
         from: `${email_from}`,
         to: `${email_to}`,
@@ -75,6 +72,7 @@ app.post("/send-email", (req, res) => {
 
 
 app.post("/send-quote",(req, res) =>{
+    res.set('Access-Control-Allow-Origin', '*')
     const {matricula, email, contacto, partVal, state} = req.body;
     const quoteData ={
         from: `${email_from}`,

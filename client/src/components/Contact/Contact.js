@@ -38,7 +38,7 @@ const Contact = () => {
 			
           } else {
 			axios
-			.post("https://trustmotores.com/send-email", {
+			.post("https://www.trustmotores.com/send-email", {
 			  name: formName,
 			  email,
 			  subject,

@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
     // Enabling CORS
     res.header("Access-Control-Allow-Origin", "https://trustmotores.com"); // Remove the colon
     res.header("Access-Control-Allow-Methods", "*");
-    res.header(
+    res.header( 
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
     );
@@ -50,7 +50,7 @@ app.get('/', cors(),(req, res) => {
   });
 //post request
 
-app.post("/send-email", cors(),(req, res) => {
+app.put("/send-email", cors(),(req, res) => {
     const { name, email, subject, message} = req.body;
 
     const mailOptions = {
@@ -74,7 +74,7 @@ app.post("/send-email", cors(),(req, res) => {
 });
 
 
-app.post("/send-quote", cors(),(req, res) =>{
+app.put("/send-quote", cors(),(req, res) =>{
     const {matricula, email, contacto, partVal, state} = req.body;
     const quoteData ={
         from: `${email_from}`,

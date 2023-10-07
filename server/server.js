@@ -11,13 +11,14 @@ const email_from = process.env.EMAIL_FROM;
 const password = process.env.PASSWORD;
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3001;
 
 
 // Middleware
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-app.use(cors());
+
 
 
 // Your other routes and configurations here
@@ -36,12 +37,12 @@ const transport = nodemailer.createTransport({
 });
 
 
-app.get('/', (req, res) => {
+app.get('/', cors(),(req, res) => {
     res.send('Server is running');
   });
 //post request
 
-app.post("/send-email", (req, res) => {
+app.post("/send-email", cors(),(req, res) => {
     const { name, email, subject, message} = req.body;
 
     const mailOptions = {
@@ -65,7 +66,7 @@ app.post("/send-email", (req, res) => {
 });
 
 
-app.post("/send-quote", (req, res) =>{
+app.post("/send-quote", cors(),(req, res) =>{
     const {matricula, email, contacto, partVal, state} = req.body;
     const quoteData ={
         from: `${email_from}`,

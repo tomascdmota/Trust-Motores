@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
     // Enabling CORS
-    res.header("Access-Control-Allow-Origin:", "https://trustmotores.com");
+    res.header("Access-Control-Allow-Origin", "https://trustmotores.com"); // Remove the colon
     res.header("Access-Control-Allow-Methods", "*");
     res.header(
       "Access-Control-Allow-Headers",
@@ -28,7 +28,6 @@ app.use(function (req, res, next) {
     );
     next();
   });
-
 
 // Your other routes and configurations here
 

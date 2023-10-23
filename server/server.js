@@ -11,18 +11,28 @@ const email_from = process.env.EMAIL_FROM;
 const password = process.env.PASSWORD;
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3001;
-
 
 // Middleware
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+
 app.use(cors({
     "origin": "*",
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
     "allowedHeaders": ['Content-Type', 'Authorization'],
     "preflightContinue": false
   }));
+
+
+app.use(function (req, res, next) {
+    // Enabling CORS
+    res.header("Access-Control-Allow-Origin", "*"); 
+    res.header("Access-Control-Allow-Methods", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Access-Control-Allow-Methods,Access-Control-Allow-Origin,Content-Type, Accept");
+    next();
+  });
 
 
 // Your other routes and configurations here
@@ -41,14 +51,14 @@ const transport = nodemailer.createTransport({
 });
 
 
-app.get('/', (req, res) => {
+app.get('/', cors(),(req, res) => {
     res.send('Server is running');
   });
 //post request
 
 app.post("/send-email", (req, res) => {
     const { name, email, subject, message} = req.body;
-
+    res.set('Access-Control-Allow-Origin', '*');
     const mailOptions = {
         from: `${email_from}`,
         to: `${email_to}`,
@@ -70,7 +80,8 @@ app.post("/send-email", (req, res) => {
 });
 
 
-app.post("/send-quote", (req, res) =>{
+app.post("/send-quote",(req, res) =>{
+    res.set('Access-Control-Allow-Origin', '*')
     const {matricula, email, contacto, partVal, state} = req.body;
     const quoteData ={
         from: `${email_from}`,

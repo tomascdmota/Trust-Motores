@@ -17,6 +17,15 @@ const port = process.env.PORT || 3001;
 // Middleware
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+
+app.use(cors({
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "allowedHeaders": ['Content-Type', 'Authorization'],
+    "preflightContinue": false
+  }));
+
+
 app.use(function (req, res, next) {
     // Enabling CORS
     res.header("Access-Control-Allow-Origin", "*"); 
@@ -24,6 +33,7 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Access-Control-Allow-Methods,Access-Control-Allow-Origin,Content-Type, Accept");
     next();
   });
+
 
 // Your other routes and configurations here
 

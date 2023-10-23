@@ -17,7 +17,12 @@ const port = process.env.PORT || 3001;
 // Middleware
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "allowedHeaders": ['Content-Type', 'Authorization'],
+    "preflightContinue": false
+  }));
 
 
 // Your other routes and configurations here
